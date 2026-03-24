@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#f2f1ec",
+              "surface-dim": "#dbdad5",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#fbf9f4",
+              "surface-container-high": "#eae8e3",
+              "tertiary-fixed": "#e3e2e4",
+              "inverse-primary": "#bcc7d8",
+              "error-container": "#ffdad6",
+              "on-tertiary-container": "#838486",
+              "primary-fixed-dim": "#bcc7d8",
+              "on-tertiary-fixed": "#1a1c1d",
+              "background": "#fbf9f4",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#636468",
+              "on-primary-container": "#7a8595",
+              "secondary-container": "#e2e2e6",
+              "on-primary-fixed": "#111c29",
+              "inverse-surface": "#30312e",
+              "surface-container-low": "#f5f3ee",
+              "surface-variant": "#e4e2dd",
+              "surface-tint": "#545f6e",
+              "on-secondary-fixed": "#191c1e",
+              "primary-fixed": "#d8e3f5",
+              "surface": "#fbf9f4",
+              "on-surface-variant": "#44474a",
+              "error": "#ba1a1a",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#e2e2e6",
+              "secondary-fixed-dim": "#c5c6ca",
+              "outline-variant": "#c5c6ca",
+              "secondary": "#5d5e62",
+              "primary-container": "#111d29",
+              "surface-container-highest": "#e4e2dd",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed-variant": "#45474a",
+              "on-primary-fixed-variant": "#3d4856",
+              "primary": "#000102",
+              "on-tertiary-fixed-variant": "#464749",
+              "on-background": "#1b1c19",
+              "outline": "#75777a",
+              "surface-container": "#f0eee9",
+              "tertiary": "#000101",
+              "on-tertiary": "#ffffff",
+              "on-surface": "#1b1c19",
+              "tertiary-container": "#1a1c1e",
+              "tertiary-fixed-dim": "#c6c6c8"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Newsreader", "serif"],
+              "label": ["Space Grotesk", "monospace"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      .archival-grid {
+        background-size: 40px 40px;
+        background-image: radial-gradient(circle, #75777a 0.5px, transparent 0.5px);
+        background-position: center;
+      }
+      .ink-bleed {
+        text-shadow: 0 0 1px rgba(0,1,2,0.1);
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar -->
+<nav class="docked full-width top-0 z-50 bg-[#fbf9f4] dark:bg-[#1A1C1E] no-border tonal-shift bg-surface-container-low flex justify-between items-center w-full px-8 py-6 max-w-[1920px] mx-auto">
+<div class="flex items-center gap-12">
+<a class="text-xl font-serif italic text-[#000102] dark:text-[#fbf9f4]" href="/">Shapes of Life</a>
+<div class="hidden md:flex gap-8">
+<a class="font-mono uppercase tracking-widest Space Grotesk text-sm text-[#000102] dark:text-[#fbf9f4] border-b border-[#000102] dark:border-[#fbf9f4] pb-0.5 hover:text-[#000102] dark:hover:text-white transition-colors duration-300" href="#">Collection</a>
+<a class="font-mono uppercase tracking-widest Space Grotesk text-sm text-[#545f6e] dark:text-[#c5c6ca] hover:text-[#000102] dark:hover:text-white transition-colors duration-300" href="#">Process</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#000102] dark:text-[#fbf9f4] hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col items-start justify-end px-8 pb-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Detailed pen plot artwork with intricate black ink hash marks on heavy cream paper" class="w-full h-full object-cover opacity-90 grayscale brightness-105" data-alt="Intricate pen plot drawing showing fine black lines on archival paper" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN-xXCPTZAW9YmAtgBpRTl-q3iL6UAQjsUDIoJ2mD-W9jA4aXYiVLMLSCxJgHRpyHAgbdU60uUFqxskP0iTF-EIrrmmmxiyKSMVzFf_-XThiZzaIJX-qJGyeZSjUJzTUA7R8goc0z58GMFL-nQ3DEZWl3ShlwpLJNLHmdnX7CshDJtysMDh6WufF2PnqQvS0j7r2WHilM5jWZyp4IWaQdkDy2C0kTPOIwaVg-dTVS9Q-yMxtAWkuFDkdU3tHQGS8kem9Pa1IjEVw"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<p class="font-label uppercase tracking-[0.2em] text-xs mb-6 text-surface-tint">Record No. 001 — David Bowie</p>
+<h1 class="font-headline italic text-7xl md:text-9xl text-primary leading-tight mb-8 ink-bleed">
+                    The Man Who <br/> Fell to Earth
+                </h1>
+<p class="font-headline text-2xl md:text-3xl text-on-surface-variant max-w-xl mb-12 leading-relaxed">
+                    A Legacy of 29,000 Hash Marks. Plotted by Machine, Defined by Life.
+                </p>
+<div class="flex flex-col md:flex-row items-start gap-8">
+<a class="bg-primary text-on-primary px-12 py-5 text-sm font-label uppercase tracking-widest hover:opacity-90 transition-opacity" href="#collection">
+                        View the Collection
+                    </a>
+<div class="flex flex-col">
+<span class="font-label text-[10px] uppercase tracking-tighter text-outline">Availability</span>
+<span class="font-headline italic text-lg text-primary">Each piece is a limited edition of 50.</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-32 px-8 bg-surface-container-low archival-grid">
+<div class="max-w-[1920px] mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start mb-24 gap-12">
+<div class="max-w-xl">
+<p class="font-label uppercase tracking-widest text-xs text-surface-tint mb-4">Methodology</p>
+<h2 class="font-headline italic text-5xl text-primary mb-8">From Python Code to Archival Ink</h2>
+<p class="font-body text-xl text-on-surface-variant leading-relaxed">
+                            Our process begins in the digital ether. Generative algorithms translate biological data into mathematical vectors, which are then meticulously executed by a vintage plotter using carbon-based archival pigment.
+                        </p>
+</div>
+<div class="border-l border-outline/20 pl-8 max-w-sm">
+<span class="font-label text-[10px] uppercase tracking-widest text-outline block mb-4">Technical Specs</span>
+<ul class="space-y-6">
+<li class="flex flex-col">
+<span class="font-label text-xs uppercase text-primary">Substrate</span>
+<span class="font-body italic text-on-surface-variant">300gsm Cotton Rag, Acid-Free</span>
+</li>
+<li class="flex flex-col">
+<span class="font-label text-xs uppercase text-primary">Instrument</span>
+<span class="font-body italic text-on-surface-variant">Axidraw V3/A3 Pen Plotter</span>
+</li>
+<li class="flex flex-col">
+<span class="font-label text-xs uppercase text-primary">Pigment</span>
+<span class="font-body italic text-on-surface-variant">Isograph Technical Ink</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Process Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-1 px-0">
+<div class="aspect-[3/4] bg-surface overflow-hidden group">
+<img alt="Close up of black ink lines forming a human profile" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Abstract generative line art showing dense black ink marks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFAyAKUa17NlBM263NyuL47vg_L6HwT-u1SZHT9IPXbCGsg_6YjLMd5B0ruMgpZL8v5_KvLp6c-tGoLGZYSzQPlzdkK2HJ6dfR108N6LZcZPIF59To8G8Cc52P9dwSGEE9nQVshqRTEAc1QaFDytLx3IaSxzW4eKPxF4QdpM87wr6ho8rxikxe2-30oAZOttNk6oJNDFwPQx_PjNbCyGO6DFYctt88CEJHmd3Mkdh53wL1QNMRhq2I0gpRArsI3CKaASI6ZI80OA"/>
+<div class="p-6">
+<span class="font-label text-[10px] uppercase text-outline">Phase 01</span>
+<h3 class="font-headline italic text-xl">The Algorithm</h3>
+</div>
+</div>
+<div class="aspect-[3/4] bg-surface overflow-hidden group mt-12 md:mt-24">
+<img alt="Plotter arm drawing on white paper" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Technical pen plotter arm moving across heavy paper substrate" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-vRBVUbKzkc2Hzrcdutg9nU8_W6nF4GMreWl2EgnO9KWqSuXNnspUjirejzSU6ra7jYknRPUkn6pD1ZN0Be12wjQVfLLnzoN1lYxgHTuC2XnT0Hm0I9eK12CM_DXbBd6N1KqHxkEl17-FDZuH-u4Q8libsy6EKD7KgO6QsWPKIOF-vvjBlhs-tT6RUZlC8bYt-CRteq_ZlwKWVuJxioGtdrEKI2qDyWRSEXz_q2pDsv5_kCam6Kh_Xb6eSKoCBYZg-KdeipCQPw"/>
+<div class="p-6">
+<span class="font-label text-[10px] uppercase text-outline">Phase 02</span>
+<h3 class="font-headline italic text-xl">The Execution</h3>
+</div>
+</div>
+<div class="aspect-[3/4] bg-surface overflow-hidden group">
+<img alt="Finished artwork framed in a minimalist gallery setting" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Completed minimalist pen plot artwork hanging in a white gallery" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGX4rWinaTJVrcqF0cv-KUPMP8oiRYV2XbdaCqKnmf4sOSug5l1MZhwtDXmntFINOaystCjhv9bQJiGE_LL8A_T41w1tRQboIVu5MFfOVR_ixZmI_r3gBw_ZUEF4qqRqWhZQRrts99TnBXa9dHfdigv9veYmgxADGJcY8LZJHSqYa9MuttbJHQi3E6QQYhB-4-eR9md1KZeHsQs5RStT8u0U4oQ8hj2heHnI2h1OMANhu1OqeAmF_Qlkx_I_65sr0yn10GUBKg7A"/>
+<div class="p-6">
+<span class="font-label text-[10px] uppercase text-outline">Phase 03</span>
+<h3 class="font-headline italic text-xl">The Provenance</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Teaser -->
+<section class="py-32 px-8 bg-surface" id="collection">
+<div class="max-w-[1920px] mx-auto flex flex-col items-center">
+<p class="font-label uppercase tracking-[0.3em] text-[10px] text-outline mb-12">The Archival Record</p>
+<div class="w-full grid grid-cols-1 md:grid-cols-2 gap-32">
+<div class="flex flex-col gap-8">
+<div class="bg-surface-container-low p-12 aspect-square flex items-center justify-center">
+<img alt="David Bowie Starman pen plot" class="max-w-full h-auto shadow-2xl" data-alt="Geometric pen plot of David Bowie stylized with hash marks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjnj6T1pWqnr_Zut89--X2ScmxV_k5NpKo68SqzUJ0i4iOrjkSpDkOL7clIMTcyWgjPxlGDGteeIVCU_L9pTgN5sxdDDx8Es_VSQTuqRjCOpRyLd4KbSWpZYOeRFc197DIE2x_ZZ0bmZs7zYSwFRWaJAAF6qPnqEgi48v53BFxY6vDboyJBDFhOFDMuPwAUwAaP5FzO3tU259cz1OFVWlZJ_2QIxfHitKYTMqGfoghcQ298K5ogePAdDle9ixef2GXm3jd7mCHgw"/>
+</div>
+<div class="flex justify-between items-end border-b border-outline/10 pb-4">
+<div>
+<h4 class="font-headline text-3xl italic">Major Tom</h4>
+<p class="font-label text-xs text-outline uppercase">Plot No. 042/050</p>
+</div>
+<span class="font-label text-sm text-primary">£450.00</span>
+</div>
+</div>
+<div class="flex flex-col gap-8 md:pt-48">
+<div class="bg-surface-container-low p-12 aspect-square flex items-center justify-center">
+<img alt="Abstract geometric landscape pen plot" class="max-w-full h-auto shadow-2xl" data-alt="Abstract pen plot consisting of hundreds of vertical ink lines" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnEaAU2OvQT68kSwwzysXZhPo_VJ4-gCcm1CwC0jO37z478GY3SCWT6lS9X5WShGG16tq_KArj8hvZoTXWR_MZ9kXWJYkg4cEP13mMFuIKB4h81UlTJIH9tBgiGg00d5mf33rb60kXDvPQxzh-PKowUj95XkQET_IXHagJuXUqTKTDKNR8AKRABoOsFSOPk8WwK7f94A6yZMtqd1D5aU-nkfLHe25StzxVviNyMF2kcR9ZJbEs0ZpzQIk_QVSKCSJxfVaNnG0V9A"/>
+</div>
+<div class="flex justify-between items-end border-b border-outline/10 pb-4">
+<div>
+<h4 class="font-headline text-3xl italic">Station to Station</h4>
+<p class="font-label text-xs text-outline uppercase">Plot No. 011/050</p>
+</div>
+<span class="font-label text-sm text-primary">£450.00</span>
+</div>
+</div>
+</div>
+<a class="mt-32 font-label uppercase tracking-widest text-xs border-b border-primary pb-1 hover:opacity-50 transition-opacity" href="#">
+                    Access Full Archive
+                </a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-8 py-12 flex flex-col md:flex-row justify-between items-start gap-8 bg-[#f0eee9] dark:bg-[#111314] text-[#545f6e] dark:text-[#c5c6ca] font-mono text-[10px] uppercase tracking-tighter Space Grotesk">
+<div class="flex flex-col gap-4">
+<span class="opacity-50">© 2024 SHAPES OF LIFE. ARCHIVAL RECORD NO. 882.</span>
+<div class="flex gap-6">
+<a class="text-[#545f6e] dark:text-[#75777a] hover:text-[#000102] dark:hover:text-white transition-all" href="#">Archive Policy</a>
+<a class="text-[#545f6e] dark:text-[#75777a] hover:text-[#000102] dark:hover:text-white transition-all" href="#">Terms of Service</a>
+<a class="text-[#545f6e] dark:text-[#75777a] hover:text-[#000102] dark:hover:text-white transition-all" href="#">Provenance</a>
+</div>
+</div>
+<div class="flex flex-col md:items-end gap-2">
+<span class="opacity-50">Studio Address</span>
+<span class="text-[#000102] dark:text-white">Unit 4, The Custard Factory, Birmingham, UK</span>
+</div>
+</footer>
+</body></html>

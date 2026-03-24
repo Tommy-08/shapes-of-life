@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Process | Shapes of Life</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "inverse-on-surface": "#f2f1ec",
+              "surface-dim": "#dbdad5",
+              "on-secondary": "#ffffff",
+              "surface-bright": "#fbf9f4",
+              "surface-container-high": "#eae8e3",
+              "tertiary-fixed": "#e3e2e4",
+              "inverse-primary": "#bcc7d8",
+              "error-container": "#ffdad6",
+              "on-tertiary-container": "#838486",
+              "primary-fixed-dim": "#bcc7d8",
+              "on-tertiary-fixed": "#1a1c1d",
+              "background": "#fbf9f4",
+              "surface-container-lowest": "#ffffff",
+              "on-primary": "#ffffff",
+              "on-secondary-container": "#636468",
+              "on-primary-container": "#7a8595",
+              "secondary-container": "#e2e2e6",
+              "on-primary-fixed": "#111c29",
+              "inverse-surface": "#30312e",
+              "surface-container-low": "#f5f3ee",
+              "surface-variant": "#e4e2dd",
+              "surface-tint": "#545f6e",
+              "on-secondary-fixed": "#191c1e",
+              "primary-fixed": "#d8e3f5",
+              "surface": "#fbf9f4",
+              "on-surface-variant": "#44474a",
+              "error": "#ba1a1a",
+              "on-error": "#ffffff",
+              "secondary-fixed": "#e2e2e6",
+              "secondary-fixed-dim": "#c5c6ca",
+              "outline-variant": "#c5c6ca",
+              "secondary": "#5d5e62",
+              "primary-container": "#111d29",
+              "surface-container-highest": "#e4e2dd",
+              "on-error-container": "#93000a",
+              "on-secondary-fixed-variant": "#45474a",
+              "on-primary-fixed-variant": "#3d4856",
+              "primary": "#000102",
+              "on-tertiary-fixed-variant": "#464749",
+              "on-background": "#1b1c19",
+              "outline": "#75777a",
+              "surface-container": "#f0eee9",
+              "tertiary": "#000101",
+              "on-tertiary": "#ffffff",
+              "on-surface": "#1b1c19",
+              "tertiary-container": "#1a1c1e",
+              "tertiary-fixed-dim": "#c6c6c8"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Newsreader", "serif"],
+              "label": ["Space Grotesk", "monospace"]
+            },
+            borderRadius: {"DEFAULT": "0px", "lg": "0px", "xl": "0px", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::selection {
+            background-color: #000102;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopAppBar from COMPONENTS_3 -->
+<nav class="fixed top-0 z-50 w-full bg-[#fbf9f4] dark:bg-[#1A1C1E] flex justify-between items-center px-8 py-6 max-w-[1920px] mx-auto">
+<div class="text-xl font-serif italic text-[#000102] dark:text-[#fbf9f4]">Shapes of Life</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-mono uppercase tracking-widest text-[11px] text-[#545f6e] dark:text-[#c5c6ca] hover:text-[#000102] dark:hover:text-white transition-colors duration-300" href="#">Collection</a>
+<a class="font-mono uppercase tracking-widest text-[11px] text-[#000102] dark:text-[#fbf9f4] border-b border-[#000102] dark:border-[#fbf9f4] pb-0.5 hover:text-[#000102] dark:hover:text-white transition-colors duration-300" href="#">Process</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#000102] dark:text-[#fbf9f4] hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</nav>
+<main class="pt-32 pb-24 max-w-[1920px] mx-auto">
+<!-- Hero Header -->
+<header class="px-8 mb-48 grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-span-7">
+<span class="font-label uppercase tracking-widest text-[10px] text-outline mb-6 block">Document 01 — Methodology</span>
+<h1 class="font-headline italic text-7xl md:text-9xl text-primary leading-[0.85] -ml-1">The Genesis of Form.</h1>
+</div>
+<div class="col-span-12 md:col-span-4 md:col-start-9 mt-12 md:mt-auto">
+<p class="font-body text-xl text-on-surface-variant leading-relaxed border-l border-outline-variant pl-8 py-2">
+                An inquiry into the intersection of deterministic logic and physical friction. A record of computational translation through ink on paper.
+            </p>
+</div>
+</header>
+<!-- Linear Process Flow -->
+<div class="space-y-64">
+<!-- Moved Section: The Plotter's Homage (Observation) -->
+<section class="px-8 grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-span-7 order-2 md:order-1">
+<div class="bg-surface-container h-[400px] border border-outline-variant relative flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 opacity-[0.03] pointer-events-none bg-[url('https://www.transparenttextures.com/patterns/natural-paper.png')]"></div>
+<div class="w-full max-w-lg px-8 space-y-4">
+<div class="h-[1px] w-full bg-outline-variant opacity-20"></div>
+<div class="h-[1px] w-3/4 bg-outline-variant opacity-20"></div>
+<div class="h-[1px] w-full bg-outline-variant opacity-20"></div>
+<div class="h-[1px] w-5/6 bg-outline-variant opacity-20"></div>
+<div class="h-[1px] w-2/3 bg-outline-variant opacity-20"></div>
+</div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="font-label text-[8px] text-outline uppercase tracking-[0.5em] opacity-40">Kinetic Translation in Progress</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 md:col-start-9 border-t border-outline-variant pt-8 order-1 md:order-2">
+<span class="font-label uppercase tracking-widest text-[10px] text-outline mb-4 block">Observation</span>
+<h2 class="font-headline italic text-4xl mb-6">Beyond the Print: A Kinetic Homage</h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed">
+<p>While a standard print is a static reproduction, a plot is a physical performance. Each hash mark represents a distinct moment in an iconic life; by drawing them separately, the plotter creates a foundational, physical record of time itself.</p>
+<p>The 8-hour duration isn't just a technical requirement—it's a deliberate act of patience and a rhythmic tribute to the subject's enduring legacy.</p>
+</div>
+</div>
+</section>
+<!-- Phase 01: The Algorithm -->
+<section class="px-8 grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-span-4 border-t border-outline-variant pt-8">
+<span class="font-label uppercase tracking-widest text-[10px] text-outline mb-4 block">Phase 01</span>
+<h2 class="font-headline italic text-4xl mb-6">The Algorithm</h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed">
+<p>Every hash mark is rooted in data. We ingest quantitative records of life events—durations, intensities, and timestamps—converting them into variables for procedural generation.</p>
+<p>A custom Python script processes these inputs using Perlin noise and mathematical constants to derive the final visual path.</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7 md:col-start-6">
+<div class="bg-surface-container-low p-8 md:p-12 border border-outline-variant border-opacity-20 shadow-sm">
+<div class="flex justify-between items-center mb-8 border-b border-outline-variant border-opacity-20 pb-4">
+<span class="font-label text-[10px] text-outline uppercase tracking-widest">path_generator.py</span>
+<div class="flex gap-2">
+<div class="w-2 h-2 rounded-full bg-outline-variant opacity-40"></div>
+<div class="w-2 h-2 rounded-full bg-outline-variant opacity-40"></div>
+</div>
+</div>
+<code class="font-mono text-sm leading-relaxed block overflow-x-auto">
+<span class="text-outline"># Hash Generation Logic</span><br/>
+<span class="text-primary font-bold">def</span> generate_path(seed, complexity):<br/>
+                            points = []<br/>
+                            <span class="text-primary font-bold">for</span> i <span class="text-primary font-bold">in</span> range(complexity):<br/>
+                                x = math.sin(seed * i) * (i * 0.1)<br/>
+                                y = math.cos(seed * i) * (i * 0.1)<br/>
+                                points.append((x, y))<br/>
+                            <span class="text-primary font-bold">return</span> points<br/><br/>
+<span class="text-outline"># Life Event Data Ingestion</span><br/>
+                        event_vector = data.ingest(<span class="text-secondary">'life_events_log.csv'</span>)
+                    </code>
+</div>
+</div>
+</section>
+<!-- Phase 02: The Layout -->
+<section class="px-8 grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-span-7 order-2 md:order-1">
+<div class="aspect-[19/24] bg-surface-container border border-outline-variant flex items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 opacity-10 pointer-events-none bg-[radial-gradient(#000_1px,transparent_1px)] [background-size:20px_20px]"></div>
+<svg class="w-3/4 h-3/4 text-primary opacity-20" viewbox="0 0 100 100">
+<rect fill="none" height="80" stroke="currentColor" stroke-width="0.2" width="80" x="10" y="10"></rect>
+<line stroke="currentColor" stroke-dasharray="2,2" stroke-width="0.1" x1="50" x2="50" y1="0" y2="100"></line>
+<line stroke="currentColor" stroke-dasharray="2,2" stroke-width="0.1" x1="0" x2="100" y1="50" y2="50"></line>
+</svg>
+<div class="absolute bottom-8 right-8 text-[9px] font-label text-outline uppercase">Canvas: 19 x 24 IN / Scale: 1:1</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 md:col-start-9 border-t border-outline-variant pt-8 order-1 md:order-2">
+<span class="font-label uppercase tracking-widest text-[10px] text-outline mb-4 block">Phase 02</span>
+<h2 class="font-headline italic text-4xl mb-6">The Layout</h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed">
+<p>The transition from code to canvas requires human intuition. We export the generated vector paths to Adobe Illustrator for architectural alignment.</p>
+<p>Every 19x24 inch canvas is hand-tuned, adjusting line weights and spatial relationships to ensure the composition breathes before the mechanical plot begins.</p>
+</div>
+</div>
+</section>
+<!-- Phase 03: The Plot -->
+<section class="px-8 grid grid-cols-12 gap-8">
+<div class="col-span-12 md:col-span-4 border-t border-outline-variant pt-8">
+<span class="font-label uppercase tracking-widest text-[10px] text-outline mb-4 block">Phase 03</span>
+<h2 class="font-headline italic text-4xl mb-6">The Plot</h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed">
+<p>Execution is a test of endurance. We utilize the AxiDraw V3/A3 pen plotter for its unmatched mechanical precision and rhythmic consistency.</p>
+<p>A single archival record requires approximately 8 hours of continuous plotting. During this time, the machine captures the subtle vibrations of the studio, embedding a unique signature into every line.</p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7 md:col-start-6">
+<div class="aspect-video bg-surface-container-low overflow-hidden group">
+<img alt="Precision pen plotter mechanical execution" class="w-full h-full object-cover grayscale transition-transform duration-1000 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCs_MZyQmktuD3hAQfsx3WxstrYmNHH_c548cdP-_hL0PcpCyL1ZjKjXKfYhDh2WY-cynAl1kmjoTzlRkRJHMhkK91lGgUv32tsAtM5Aqbq0Ke52TQP9fPq6mHutyquc8TYHamIvE9zgo7q-YC2HlcQB0-w-XiZU56TVO-2Mn9H4zuxDxW8myPERbcwVZzhu7KMXgVD7ZKl6D7kmER-tfdDm0EGahm-ijbiqDoXTvPDcOW_NkqnoR65TCofRJE_RjX2PZ0-Pt-PcQ"/>
+</div>
+<div class="mt-4 flex justify-between font-label text-[9px] text-outline uppercase tracking-widest">
+<span>Active Status: Plotting</span>
+<span>Elapsed Time: 05:42:12</span>
+</div>
+</div>
+</section>
+<!-- Phase 04: The Materials -->
+<section class="px-8 grid grid-cols-12 gap-8 pb-32">
+<div class="col-span-12 md:col-span-7">
+<div class="grid grid-cols-2 gap-1">
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img alt="Material Detail Pen Tip" class="w-full h-full object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuATPd7lE-vHEpKudREyVIi7MITJ5xA8umjWrianJXsBbS5xbCPk43j2aQ8CKwLtKuiZoC6qA-rbZBRd7LADQF-END5-V4uygfykMfMz4gaRox-_M-J1x3m0e6oRP5jNXnY9Bpa_G3lsb8TUHVPLpPB_o7fJ-DL-KHqLDySrT5MibSYLhVqkuIsqAJ4rLto8dQyKJQrDi42HnlNys7PLddpRp8gxxU7ghiDS6emzokHU_1zjJTM_ruJCMHVhBKy6ZNG1blRzNGjIHA"/>
+</div>
+<div class="aspect-square bg-surface-container overflow-hidden">
+<img alt="Material Detail Paper Grain" class="w-full h-full object-cover grayscale opacity-80" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkJeBWGq2fv0loWa4Ixsxhbtb1lpYysXY2puCP2cxfkmMYIFFcvHbR_tYbqyM9vnH8aqITOejXe0EzEzn4vbGfg0BGlVbbEbKR2y59KrijBBVQv3flWCb9E1QFdjzGv6S2HjJB_AW_VfJJhsSIGVZhjU7k8I4InQvKdFiGzotUUFrhY0MePM9lrTu44WcX3nndKDg70bl1m8B2G-bwlCa3u1dhue3BZ7UOKNHJGT1X9f0sbonTUgbZ_blvqTaDh4KpHRvcscR7CA"/>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-4 md:col-start-9 border-t border-outline-variant pt-8">
+<span class="font-label uppercase tracking-widest text-[10px] text-outline mb-4 block">Phase 04</span>
+<h2 class="font-headline italic text-4xl mb-6">The Materials</h2>
+<div class="space-y-6 text-on-surface-variant leading-relaxed">
+<p>Permanence is our priority. We utilize 300gsm acid-free cotton rag paper, chosen for its structural integrity and tactile grain.</p>
+<p>Our drawings are rendered with lightfast carbon-based pigment ink (ISO 12757-2). This combination ensures that the record remains as vivid a century from now as the day it was plotted.</p>
+</div>
+</div>
+</section>
+</div>
+<!-- Final CTA -->
+<section class="mt-32 mb-32 px-8 text-center border-t border-outline-variant pt-32">
+<p class="font-label uppercase tracking-widest text-xs mb-8">Process Documentation Complete</p>
+<a class="inline-block border border-primary px-16 py-6 text-[11px] font-label uppercase tracking-[0.25em] bg-primary text-on-primary hover:bg-transparent hover:text-primary transition-all duration-500" href="#">
+            View Resulting Records
+        </a>
+</section>
+</main>
+<!-- Footer from COMPONENTS_3 -->
+<footer class="w-full px-8 py-12 flex flex-col md:flex-row justify-between items-start gap-8 bg-[#f0eee9] dark:bg-[#111314] text-[#545f6e] dark:text-[#c5c6ca] font-mono text-[10px] uppercase tracking-tighter">
+<div class="max-w-sm">
+        © 2024 SHAPES OF LIFE. ARCHIVAL RECORD NO. 882.
+    </div>
+<div class="flex flex-wrap gap-8">
+<a class="hover:text-[#000102] dark:hover:text-white transition-all" href="#">Archive Policy</a>
+<a class="hover:text-[#000102] dark:hover:text-white transition-all" href="#">Terms of Service</a>
+<a class="text-[#000102] dark:text-white underline hover:text-[#000102] dark:hover:text-white transition-all" href="#">Provenance</a>
+</div>
+</footer>
+</body></html>

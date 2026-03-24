@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "inverse-on-surface": "#f2f1ec",
+                        "surface-dim": "#dbdad5",
+                        "on-secondary": "#ffffff",
+                        "surface-bright": "#fbf9f4",
+                        "surface-container-high": "#eae8e3",
+                        "tertiary-fixed": "#e3e2e4",
+                        "inverse-primary": "#bcc7d8",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#838486",
+                        "primary-fixed-dim": "#bcc7d8",
+                        "on-tertiary-fixed": "#1a1c1d",
+                        "background": "#fbf9f4",
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "on-secondary-container": "#636468",
+                        "on-primary-container": "#7a8595",
+                        "secondary-container": "#e2e2e6",
+                        "on-primary-fixed": "#111c29",
+                        "inverse-surface": "#30312e",
+                        "surface-container-low": "#f5f3ee",
+                        "surface-variant": "#e4e2dd",
+                        "surface-tint": "#545f6e",
+                        "on-secondary-fixed": "#191c1e",
+                        "primary-fixed": "#d8e3f5",
+                        "surface": "#fbf9f4",
+                        "on-surface-variant": "#44474a",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "secondary-fixed": "#e2e2e6",
+                        "secondary-fixed-dim": "#c5c6ca",
+                        "outline-variant": "#c5c6ca",
+                        "secondary": "#5d5e62",
+                        "primary-container": "#111d29",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-error-container": "#93000a",
+                        "on-secondary-fixed-variant": "#45474a",
+                        "on-primary-fixed-variant": "#3d4856",
+                        "primary": "#000102",
+                        "on-tertiary-fixed-variant": "#464749",
+                        "on-background": "#1b1c19",
+                        "outline": "#75777a",
+                        "surface-container": "#f0eee9",
+                        "tertiary": "#000101",
+                        "on-tertiary": "#ffffff",
+                        "on-surface": "#1b1c19",
+                        "tertiary-container": "#1a1c1e",
+                        "tertiary-fixed-dim": "#c6c6c8"
+                    },
+                    fontFamily: {
+                        "headline": ["Newsreader", "serif"],
+                        "body": ["Newsreader", "serif"],
+                        "label": ["Space Grotesk", "monospace"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            background-color: #fbf9f4;
+            color: #000102;
+        }
+    </style>
+</head>
+<body class="font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 z-50 w-full bg-[#fbf9f4] dark:bg-[#1A1C1E]">
+<div class="flex justify-between items-center w-full px-8 py-6 max-w-[1920px] mx-auto">
+<div class="text-xl font-serif italic text-[#000102] dark:text-[#fbf9f4]">
+                Shapes of Life
+            </div>
+<nav class="hidden md:flex items-center gap-12">
+<a class="font-mono uppercase tracking-widest text-[11px] text-[#000102] dark:text-[#fbf9f4] border-b border-[#000102] dark:border-[#fbf9f4] pb-0.5 hover:text-[#000102] dark:hover:text-white transition-colors duration-300" href="#">Collection</a>
+<a class="font-mono uppercase tracking-widest text-[11px] text-[#545f6e] dark:text-[#c5c6ca] hover:text-[#000102] dark:hover:text-white transition-colors duration-300" href="#">Process</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="text-[#000102] dark:text-[#fbf9f4] hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-24 px-8 max-w-[1920px] mx-auto">
+<!-- Header Section -->
+<section class="mb-24 flex flex-col md:flex-row justify-between items-end gap-8">
+<div class="max-w-2xl">
+<span class="font-label text-[10px] uppercase tracking-[0.2em] text-outline mb-4 block">Archive Record v.01</span>
+<h1 class="text-6xl md:text-8xl font-headline italic leading-[0.9] tracking-tighter">
+                    The Pulse <br/> of Legacy.
+                </h1>
+</div>
+<div class="text-right">
+<p class="font-label text-[11px] uppercase tracking-widest text-on-surface-variant max-w-[200px]">
+                    Technical plotting of bio-rhythmic data translated into generative art.
+                </p>
+</div>
+</section>
+<!-- Gallery Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-24 gap-x-12">
+<!-- Item: David Bowie -->
+<article class="group flex flex-col">
+<div class="aspect-[3/4] bg-surface-container-low overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-90 group-hover:scale-[1.02] transition-transform duration-700" data-alt="Abstract minimalist line art plotting of sound waves" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVyYgvnN-fM-vJpRYUFFaJ_XwkU4JaKRcYiJrnLWiFVPXesYgtu1kFMCtGuLqtNBz7m6wZJmdSloUTZh4NUWalsA7ITRUsrTjhAbse-2uYvX2ZO62xOKUEHuaaG2w9nm9SK4cM6xKhQOM0BOnk5U44hxo9mIBLEFovLMnTUNnMGi9Ib5WmqOQ9KJ4NrlpbX4hnipowGUvTyVBXHyQ5W7Xp51dD5GG7zo_uYi47VReLCs5CBx6v11qpxfOvCd3-qiHbK0kSvuz2Cw"/>
+<div class="absolute top-4 right-4 bg-surface px-3 py-1">
+<span class="font-label text-[10px] uppercase tracking-tighter">Cat. No 001</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-baseline">
+<h2 class="text-3xl font-headline italic">David Bowie</h2>
+<span class="font-label text-[10px] text-outline">1947 — 2016</span>
+</div>
+<div class="h-px w-full bg-outline opacity-10 my-4"></div>
+<div class="flex justify-between items-center">
+<span class="font-label text-[11px] uppercase tracking-widest text-on-surface-variant">Limited Edition 22/50 remaining</span>
+<button class="font-label text-[11px] uppercase tracking-widest underline underline-offset-4 hover:text-primary transition-colors">Acquire</button>
+</div>
+</div>
+</article>
+<!-- Item: Johnny Cash -->
+<article class="group flex flex-col">
+<div class="aspect-[3/4] bg-surface-container-low overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover mix-blend-multiply opacity-90 group-hover:scale-[1.02] transition-transform duration-700" data-alt="Monochromatic technical drawing of frequency oscillations" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0nE0RHUUBF-YDzREah9ipKi2YSvIE6wVZncWUjgayuldNjJ-RppckhNVDPtrd8xZwO6RmMQRS4ugTILe08oGRzp3h6ljR5p6ykz2dst1iCb4BeJoAYtvN_K45CZA_SMduC-gfwN2l9PTwZQ7zSAkFS-O-wf0Wp7lrodGRm_x2UJGX0Aoq5u7M_Vvqgwk1z5PuZiYsXJSyI2hhAcgtC8bbLHfiW8PTadIvff2tRP9Q6ho1wNEZKZpl2s_6iauW84hBP1GvdN9BIw"/>
+<div class="absolute top-4 right-4 bg-surface px-3 py-1">
+<span class="font-label text-[10px] uppercase tracking-tighter">Cat. No 002</span>
+</div>
+</div>
+<div class="flex flex-col gap-1">
+<div class="flex justify-between items-baseline">
+<h2 class="text-3xl font-headline italic">Johnny Cash</h2>
+<span class="font-label text-[10px] text-outline">1932 — 2003</span>
+</div>
+<div class="h-px w-full bg-outline opacity-10 my-4"></div>
+<div class="flex justify-between items-center">
+<span class="font-label text-[11px] uppercase tracking-widest text-on-surface-variant">Limited Edition 14/50 remaining</span>
+<button class="font-label text-[11px] uppercase tracking-widest underline underline-offset-4 hover:text-primary transition-colors">Acquire</button>
+</div>
+</div>
+</article>
+<!-- Upcoming: Prince -->
+<article class="flex flex-col">
+<div class="aspect-[3/4] bg-surface-container border border-dashed border-outline-variant flex items-center justify-center mb-6">
+<div class="text-center p-8">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-outline block mb-4">In Plotting</span>
+<h2 class="text-4xl font-headline italic text-surface-dim">Prince</h2>
+<p class="font-label text-[10px] text-outline mt-2 italic">Scheduled Release Q3</p>
+</div>
+</div>
+<div class="opacity-30">
+<div class="flex justify-between items-baseline">
+<h2 class="text-3xl font-headline italic">Upcoming</h2>
+<span class="font-label text-[10px] text-outline">Coming Soon</span>
+</div>
+</div>
+</article>
+<!-- Upcoming: Kurt Cobain -->
+<article class="flex flex-col">
+<div class="aspect-[3/4] bg-surface-container border border-dashed border-outline-variant flex items-center justify-center mb-6">
+<div class="text-center p-8">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-outline block mb-4">Archiving Data</span>
+<h2 class="text-4xl font-headline italic text-surface-dim">Kurt Cobain</h2>
+</div>
+</div>
+<div class="opacity-30">
+<div class="flex justify-between items-baseline">
+<h2 class="text-3xl font-headline italic">Upcoming</h2>
+<span class="font-label text-[10px] text-outline">Coming Soon</span>
+</div>
+</div>
+</article>
+<!-- Upcoming: Jimi Hendrix -->
+<article class="flex flex-col">
+<div class="aspect-[3/4] bg-surface-container border border-dashed border-outline-variant flex items-center justify-center mb-6">
+<div class="text-center p-8">
+<span class="font-label text-[10px] uppercase tracking-[0.3em] text-outline block mb-4">Signal Processing</span>
+<h2 class="text-4xl font-headline italic text-surface-dim">Jimi Hendrix</h2>
+</div>
+</div>
+<div class="opacity-30">
+<div class="flex justify-between items-baseline">
+<h2 class="text-3xl font-headline italic">Upcoming</h2>
+<span class="font-label text-[10px] text-outline">Coming Soon</span>
+</div>
+</div>
+</article>
+<!-- Metadata Utility Card -->
+<article class="flex flex-col bg-surface-container-high p-12 justify-center border-l border-primary/5">
+<div class="space-y-8">
+<div>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Process Metadata</span>
+<p class="mt-4 font-body italic text-lg leading-relaxed">
+                            Each plot represents a 1:1 mapping of biological frequency. No two curves are identical, as no two lives are lived the same.
+                        </p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between font-label text-[10px] uppercase tracking-tighter">
+<span>Paper Stock</span>
+<span>Hahnemühle 308gsm</span>
+</div>
+<div class="flex justify-between font-label text-[10px] uppercase tracking-tighter">
+<span>Ink Profile</span>
+<span>Carbon Pigment</span>
+</div>
+<div class="flex justify-between font-label text-[10px] uppercase tracking-tighter">
+<span>Dimensions</span>
+<span>700mm x 1000mm</span>
+</div>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-label text-[11px] uppercase tracking-[0.2em] hover:opacity-90 transition-opacity">
+                        View Technical Docs
+                    </button>
+</div>
+</article>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full px-8 py-12 flex flex-col md:flex-row justify-between items-start gap-8 bg-[#f0eee9] dark:bg-[#111314]">
+<div class="flex flex-col gap-4">
+<span class="font-mono text-[10px] uppercase tracking-tighter text-[#545f6e] dark:text-[#c5c6ca]">
+                © 2024 SHAPES OF LIFE. ARCHIVAL RECORD NO. 882.
+            </span>
+</div>
+<div class="flex flex-wrap gap-8">
+<a class="font-mono text-[10px] uppercase tracking-tighter text-[#545f6e] dark:text-[#75777a] hover:text-[#000102] dark:hover:text-white transition-all" href="#">Archive Policy</a>
+<a class="font-mono text-[10px] uppercase tracking-tighter text-[#545f6e] dark:text-[#75777a] hover:text-[#000102] dark:hover:text-white transition-all" href="#">Terms of Service</a>
+<a class="font-mono text-[10px] uppercase tracking-tighter text-[#545f6e] dark:text-[#75777a] hover:text-[#000102] dark:hover:text-white transition-all" href="#">Provenance</a>
+</div>
+</footer>
+</body></html>

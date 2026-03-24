@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shapes of Life — Archival Pen Plotter Art</title>
+  <meta name="description"
+    content="Limited edition pen plotter art translating the lives of music icons into 29,000+ hand-plotted hash marks. David Bowie. Johnny Cash. And more." />
+  <link rel="stylesheet" href="styles/index.css" />
+  <style>
+    /* ---- Hero ---- */
+    .hero {
+      position: relative;
+      min-height: 100svh;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+      padding-bottom: 6rem;
+    }
+
+    .hero__bg {
+      position: absolute;
+      inset: 0;
+      z-index: 0;
+    }
+
+    .hero__bg img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: grayscale(1) brightness(1.06);
+      opacity: 0.88;
+    }
+
+    .hero__gradient {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, #fbf9f4 8%, rgba(251, 249, 244, 0.15) 60%, transparent 100%);
+    }
+
+    .hero__content {
+      position: relative;
+      z-index: 10;
+      width: 100%;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .hero__content {
+        padding: 0 3rem;
+      }
+    }
+
+    .hero__kicker {
+      color: var(--tint);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero__headline {
+      color: var(--primary);
+      width: 100%;
+      margin-bottom: 2rem;
+    }
+
+    .hero__sub {
+      max-width: 480px;
+      margin-bottom: 3rem;
+    }
+
+    .hero__ctas {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+
+    @media (min-width: 640px) {
+      .hero__ctas {
+        flex-direction: row;
+        align-items: center;
+      }
+    }
+
+    .hero__availability .label-sm {
+      color: var(--outline);
+    }
+
+    .hero__availability p {
+      font-family: var(--font-headline);
+      font-style: italic;
+      font-size: 1.125rem;
+      margin-top: 0.25rem;
+    }
+
+    /* ---- Process Section ---- */
+    .process-section {
+      padding: 8rem 2rem;
+      background: var(--surface-low);
+    }
+
+    @media (min-width: 768px) {
+      .process-section {
+        padding: 8rem 3rem;
+      }
+    }
+
+    .process-section__container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    .process-header {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      margin-bottom: 6rem;
+    }
+
+    @media (min-width: 768px) {
+      .process-header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+    }
+
+    .process-header__left {
+      max-width: 540px;
+    }
+
+    .process-header__right {
+      max-width: 320px;
+      border-left: 1px solid rgba(117, 119, 122, 0.2);
+      padding-left: 2rem;
+    }
+
+    .process-header__right .spec-table {
+      margin-top: 1.5rem;
+    }
+
+    .process-phases {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1px;
+    }
+
+    @media (min-width: 768px) {
+      .process-phases {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .phase-card {
+      background: var(--surface);
+      overflow: hidden;
+    }
+
+    .phase-card:nth-child(2) {
+      margin-top: 0;
+    }
+
+    @media (min-width: 768px) {
+      .phase-card:nth-child(2) {
+        margin-top: 6rem;
+      }
+    }
+
+    .phase-card__img {
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+    }
+
+    .phase-card__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.7s ease;
+      filter: grayscale(1);
+    }
+
+    .phase-card:hover .phase-card__img img {
+      transform: scale(1.04);
+    }
+
+    .phase-card__body {
+      padding: 1.5rem;
+    }
+
+    /* ---- Gallery Teaser ---- */
+    .gallery-section {
+      padding: 8rem 2rem;
+      background: var(--surface);
+    }
+
+    @media (min-width: 768px) {
+      .gallery-section {
+        padding: 8rem 3rem;
+      }
+    }
+
+    .gallery-section__container {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .gallery-kicker {
+      color: var(--outline);
+      margin-bottom: 4rem;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 6rem;
+      }
+    }
+
+    .gallery-item {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .gallery-item:nth-child(2) {
+      padding-top: 0;
+    }
+
+    @media (min-width: 768px) {
+      .gallery-item:nth-child(2) {
+        padding-top: 10rem;
+      }
+    }
+
+    .gallery-item__matte {
+      background: var(--surface-low);
+      padding: 3rem;
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .gallery-item__matte img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      box-shadow: 0 20px 50px rgba(27, 28, 25, 0.12);
+      transition: transform 0.7s ease;
+    }
+
+    .gallery-item:hover .gallery-item__matte img {
+      transform: scale(1.03);
+    }
+
+    .gallery-item__meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      border-bottom: 1px solid rgba(117, 119, 122, 0.1);
+      padding-bottom: 1rem;
+    }
+
+    .gallery-item__title {
+      font-family: var(--font-headline);
+      font-style: italic;
+      font-size: 1.875rem;
+      font-weight: 300;
+    }
+
+    .gallery-item__edition {
+      font-family: var(--font-label);
+      font-size: 0.5625rem;
+      color: var(--outline);
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+    }
+
+    .gallery-cta {
+      margin-top: 6rem;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Shapes of Life</a>
+      <div class="nav__links">
+        <a href="collection.html" class="nav__link">Collection</a>
+        <a href="process.html" class="nav__link">Process</a>
+      </div>
+      <div class="nav__actions">
+        <button class="nav__cart-btn" aria-label="Shopping cart">
+          <span class="material-symbols-outlined">shopping_cart</span>
+          <span class="nav__cart-count" aria-live="polite">0</span>
+        </button>
+        <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="nav__mobile-drawer" aria-hidden="true">
+    <a href="collection.html" class="nav__link">Collection</a>
+    <a href="process.html" class="nav__link">Process</a>
+  </div>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero" aria-label="Hero">
+      <div class="hero__bg">
+        <video src="assets/videos/IMG_4499.mp4" autoplay loop muted playsinline
+          style="width: 100%; height: 100%; object-fit: cover;"></video>
+        <div class="hero__gradient"></div>
+      </div>
+
+      <div class="hero__content" data-fade>
+        <p class="label-sm hero__kicker">Record No. 001 — David Bowie</p>
+        <h1 class="display-lg hero__headline ink-bleed">
+          The Shape of a Life.
+        </h1>
+        <p class="body-lg hero__sub">
+          Visualizing the lives of music icons through ink and paper.
+        </p>
+        <div class="hero__ctas">
+          <a href="collection.html" class="btn-primary">View the Collection</a>
+          <div class="hero__availability">
+            <span class="label-sm">Availability</span>
+            <p>Each piece is a limited edition of 50.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="process-section archival-grid" aria-labelledby="process-heading">
+      <div class="process-section__container">
+
+        <div class="process-header">
+          <div class="process-header__left" data-fade>
+            <p class="label-sm" style="color:var(--tint);margin-bottom:1rem;">Methodology</p>
+            <h2 id="process-heading" class="display-md" style="margin-bottom:2rem;">From an Idea<br />to Ink on Paper
+            </h2>
+            <p class="body-lg">
+              This all started as a simple idea: how do we visualize a life? Today, it involves researching our favorite
+              icons, translating their life events into code, and using a Bantam Tools NextDraw™ 2234 large format
+              plotter to physically draw their timelines using archival ink.
+            </p>
+          </div>
+
+          <div class="process-header__right" data-fade>
+            <span class="label-sm" style="color:var(--outline);">Technical Specs</span>
+            <ul class="spec-table">
+              <li class="spec-row">
+                <span class="spec-row__key">Substrate</span>
+                <span class="spec-row__val" style="font-style:italic;font-family:var(--font-headline);">300gsm Cotton
+                  Rag, Acid-Free</span>
+              </li>
+              <li class="spec-row">
+                <span class="spec-row__key">Instrument</span>
+                <span class="spec-row__val" style="font-style:italic;font-family:var(--font-headline);">Bantam Tools
+                  NextDraw™ 2234</span>
+              </li>
+              <li class="spec-row">
+                <span class="spec-row__key">Pigment</span>
+                <span class="spec-row__val" style="font-style:italic;font-family:var(--font-headline);">Isograph
+                  Technical Ink</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 3-phase staggered grid -->
+        <div class="process-phases">
+          <div class="phase-card" data-fade>
+            <div class="phase-card__img code-block" style="border: none; margin-bottom: 1.5rem; height: auto; aspect-ratio: 3 / 4;">
+              <div class="code-block__header">
+                <span class="code-block__filename">path_generator.py</span>
+                <div class="code-block__dots">
+                  <div class="code-block__dot"></div>
+                  <div class="code-block__dot"></div>
+                </div>
+              </div>
+              <pre><span class="cm"># Hash Generation Logic</span>
+<span class="kw">def</span> generate_path(seed, n):
+    pts = []
+    <span class="kw">for</span> i <span class="kw">in</span> range(n):
+        x = noise.pnoise1(i * seed)
+        y = noise.pnoise1(i + 100)
+        pts.append((x, y))
+    <span class="kw">return</span> Path(pts)
+
+<span class="kw">for</span> week <span class="kw">in</span> events:
+    p = generate_path(week.seed, 12)
+    canvas.draw(p, pen=<span class="st">'0.1mm'</span>)</pre>
+            </div>
+            <div class="phase-card__body">
+              <span class="label-sm" style="color:var(--outline);">Phase 01</span>
+              <h3 class="headline" style="margin-top:0.5rem;">The Algorithm</h3>
+            </div>
+          </div>
+
+          <div class="phase-card" data-fade>
+            <div class="phase-card__img">
+              <video src="assets/videos/IMG_4496.mp4" autoplay loop muted playsinline
+                style="width: 100%; height: 100%; object-fit: cover;"></video>
+            </div>
+            <div class="phase-card__body">
+              <span class="label-sm" style="color:var(--outline);">Phase 02</span>
+              <h3 class="headline" style="margin-top:0.5rem;">The Execution</h3>
+            </div>
+          </div>
+
+          <div class="phase-card" data-fade>
+            <div class="phase-card__img">
+              <img src="assets/images/IMG_4534.jpg" alt="Finished pen plotter artwork in a gallery setting"
+                style="filter:grayscale(0.2);" />
+            </div>
+            <div class="phase-card__body">
+              <span class="label-sm" style="color:var(--outline);">Phase 03</span>
+              <h3 class="headline" style="margin-top:0.5rem;">The Final Piece</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY TEASER -->
+    <section class="gallery-section" id="collection" aria-labelledby="gallery-heading">
+      <div class="gallery-section__container">
+        <p class="label-sm gallery-kicker">The Archival Record</p>
+
+        <div class="gallery-grid">
+          <div class="gallery-item" data-fade>
+            <a href="detail.html" class="gallery-item__matte">
+              <img src="assets/images/IMG_4534.jpg" alt="David Bowie pen plot artwork — Major Tom edition" />
+            </a>
+            <div class="gallery-item__meta">
+              <div>
+                <h3 class="gallery-item__title">Major Tom</h3>
+                <p class="gallery-item__edition">Plot No. 042/050</p>
+              </div>
+              <span class="label-md">£450.00</span>
+            </div>
+          </div>
+
+          <div class="gallery-item" data-fade>
+            <a href="detail.html" class="gallery-item__matte">
+              <img src="assets/images/IMG_4536.jpg" alt="Johnny Cash pen plot artwork — Station to Station" />
+            </a>
+            <div class="gallery-item__meta">
+              <div>
+                <h3 class="gallery-item__title">Station to Station</h3>
+                <p class="gallery-item__edition">Plot No. 011/050</p>
+              </div>
+              <span class="label-md">£450.00</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="collection.html" class="btn-tertiary gallery-cta">Access Full Archive</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div>
+      <p class="footer__copy">© 2026 Shapes of Life. Archival Record No. 882.</p>
+      <div class="footer__links" style="margin-top:1rem;">
+        <a href="#" class="footer__link">Archive Policy</a>
+        <a href="#" class="footer__link">Terms of Service</a>
+        <a href="#" class="footer__link">Authenticity</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer__copy" style="margin-bottom:0.25rem;">Studio Address</p>
+      <p class="footer__address">Unit 4, The Custard Factory, Birmingham, UK</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>

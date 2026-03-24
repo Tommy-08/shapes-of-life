@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>David Bowie: A Visual Chronology — Shapes of Life</title>
+  <meta name="description"
+    content="A chronometric mapping of David Bowie's life in 29,412 archival pen-plotted hash marks. Limited edition of 50. Each piece signed and numbered." />
+  <link rel="stylesheet" href="styles/index.css" />
+  <style>
+    body {
+      padding-top: var(--nav-height);
+    }
+
+    /* ---- Breadcrumb Header ---- */
+    .detail-header {
+      padding: 3rem 2rem;
+      border-bottom: 1px solid rgba(197, 198, 202, 0.2);
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+
+    @media (min-width: 768px) {
+      .detail-header {
+        padding: 3rem 3rem;
+      }
+    }
+
+    .detail-header__inner {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    @media (min-width: 768px) {
+      .detail-header__inner {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+    }
+
+    .detail-header__status {
+      text-align: left;
+    }
+
+    @media (min-width: 768px) {
+      .detail-header__status {
+        text-align: right;
+      }
+    }
+
+    /* ---- Main Content ---- */
+    .detail-main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    @media (min-width: 768px) {
+      .detail-main {
+        padding: 4rem 3rem 6rem;
+      }
+    }
+
+    .detail-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 4rem;
+    }
+
+    @media (min-width: 1024px) {
+      .detail-grid {
+        grid-template-columns: 7fr 4fr;
+        gap: 5rem;
+        align-items: start;
+      }
+    }
+
+    /* Left column */
+    .detail-primary {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+
+    .detail-primary__matte {
+      background: var(--surface-low);
+      padding: 2rem;
+    }
+
+    @media (min-width: 768px) {
+      .detail-primary__matte {
+        padding: 4rem;
+      }
+    }
+
+    .detail-primary__matte img {
+      width: 100%;
+      height: auto;
+      box-shadow: 0 20px 60px rgba(27, 28, 25, 0.12);
+    }
+
+    .detail-primary__fig-caption {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 1.5rem;
+    }
+
+    /* Macro + spec split */
+    .detail-macro-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 640px) {
+      .detail-macro-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .detail-macro__aside {
+      border-left: 1px solid rgba(197, 198, 202, 0.2);
+      padding-left: 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+    }
+
+    /* Right column (sticky sidebar) */
+    .detail-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+    }
+
+    @media (min-width: 1024px) {
+      .detail-sidebar {
+        position: sticky;
+        top: calc(var(--nav-height) + 2rem);
+      }
+    }
+
+    .detail-narrative {
+      padding: 0 0.5rem;
+    }
+
+    .detail-narrative__title {
+      font-family: var(--font-label);
+      font-size: 0.5625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--outline);
+      margin-bottom: 1.5rem;
+    }
+
+    /* ---- Technical Process (bottom) ---- */
+    .technical-process {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+      border-top: 1px solid rgba(197, 198, 202, 0.2);
+    }
+
+    @media (min-width: 768px) {
+      .technical-process {
+        padding: 4rem 3rem 6rem;
+      }
+    }
+
+    .technical-process__grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .technical-process__grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Shapes of Life</a>
+      <div class="nav__links">
+        <a href="collection.html" class="nav__link">Collection</a>
+        <a href="process.html" class="nav__link">Process</a>
+      </div>
+      <div class="nav__actions">
+        <button class="nav__cart-btn" aria-label="Shopping cart">
+          <span class="material-symbols-outlined">shopping_cart</span>
+          <span class="nav__cart-count" aria-live="polite">0</span>
+        </button>
+        <button class="nav__hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <div class="nav__mobile-drawer">
+    <a href="collection.html" class="nav__link">Collection</a>
+    <a href="process.html" class="nav__link">Process</a>
+  </div>
+
+  <main>
+
+    <!-- BREADCRUMB HEADER -->
+    <div class="detail-header">
+      <div class="detail-header__inner" data-fade>
+        <div>
+          <span class="label-sm" style="color:var(--outline);display:block;margin-bottom:0.75rem;">Inventory Record //
+            Plotter Output</span>
+          <h1 class="display-md" style="color:var(--primary);">David Bowie:<br />A Visual Chronology</h1>
+        </div>
+        <div class="detail-header__status">
+          <span class="label-sm" style="color:var(--outline);display:block;margin-bottom:0.25rem;">Status</span>
+          <span class="label-lg" style="color:var(--primary);">Limited Edition [01/50]</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="detail-main">
+      <div class="detail-grid">
+
+        <!-- LEFT: Art + Details -->
+        <div class="detail-primary" data-fade>
+
+          <!-- Main image with matte -->
+          <div>
+            <div class="detail-primary__matte">
+              <img src="assets/images/IMG_4501.jpg"
+                alt="Full composition pen plot on 300gsm cold-press — David Bowie life timeline" />
+            </div>
+            <div class="detail-primary__fig-caption">
+              <span class="label-sm" style="color:var(--outline);max-width:200px;">Fig. 01 — Full composition plot on
+                300gsm cold-press.</span>
+              <span class="label-sm" style="color:var(--outline);">Scale: 1:1</span>
+            </div>
+          </div>
+
+          <!-- Macro crop + specs -->
+          <div class="detail-macro-grid">
+            <div>
+              <span class="label-sm" style="color:var(--outline);display:block;margin-bottom:1rem;">Archival Detail //
+                400% Crop</span>
+              <div style="background:var(--surface-low);overflow:hidden;">
+                <img src="assets/images/IMG_4493.jpg" alt="400% macro detail of hash mark ink marks on archival paper"
+                  style="width:100%;aspect-ratio:1/1;object-fit:cover;filter:grayscale(1);opacity:0.88;" />
+              </div>
+              <p class="body-md" style="margin-top:1rem;font-style:italic;">
+                Each hash mark represents a distinct moment in their life. The ink saturation varies slightly
+                based on the pen's velocity across the X-Y axis and the pressure applied. This makes each print unique.
+              </p>
+            </div>
+
+            <div class="detail-macro__aside">
+              <h3 class="label-sm" style="color:var(--outline);margin-bottom:1.5rem;">Technical Specification</h3>
+              <ul class="spec-table">
+                <li class="spec-row">
+                  <span class="spec-row__key">Dimensions</span>
+                  <span class="spec-row__val">19 × 24 Inches</span>
+                </li>
+                <li class="spec-row">
+                  <span class="spec-row__key">Medium</span>
+                  <span class="spec-row__val">Archival Pen on Paper</span>
+                </li>
+                <li class="spec-row">
+                  <span class="spec-row__key">Total Paths</span>
+                  <span class="spec-row__val">29,412 Segments</span>
+                </li>
+                <li class="spec-row">
+                  <span class="spec-row__key">Execution Time</span>
+                  <span class="spec-row__val">08h : 14m : 22s</span>
+                </li>
+                <li class="spec-row">
+                  <span class="spec-row__key">Paper</span>
+                  <span class="spec-row__val">300gsm Cotton Rag</span>
+                </li>
+                <li class="spec-row">
+                  <span class="spec-row__key">Instrument</span>
+                  <span class="spec-row__val">Bantam Tools NextDraw™ 2234</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- RIGHT: Sidebar -->
+        <aside class="detail-sidebar" data-fade>
+
+          <!-- Acquisition Card -->
+          <div class="acquisition-card">
+            <span class="acquisition-card__label">List Price</span>
+            <div class="acquisition-card__price">$1,450.00</div>
+            <p class="acquisition-card__desc">
+              A mathematical translation of six decades. Hand-plotted using a Bantam Tools NextDraw™ 2234 large format
+              plotter with 0.1mm technical ink on 300gsm acid-free cotton rag.
+            </p>
+            <div style="display:flex;flex-direction:column;gap:0.75rem;">
+              <button class="btn-primary js-add-to-cart" style="width:100%;">Add to Collection</button>
+              <button class="btn-secondary" style="width:100%;">Request Authenticity Certificate</button>
+            </div>
+            <div class="acquisition-card__divider"></div>
+            <div class="acquisition-card__signed">
+              <span class="material-symbols-outlined" style="font-size:1rem;">verified</span>
+              Signed &amp; Numbered by the Artist
+            </div>
+          </div>
+
+          <!-- Narrative -->
+          <div class="detail-narrative">
+            <h2 class="detail-narrative__title">The Narrative Record</h2>
+            <div style="display:flex;flex-direction:column;gap:1.25rem;">
+              <p class="body-md" style="font-size:1.0625rem;">
+                This piece is a chronometric mapping of David Bowie's creative output. Each of the <em><strong>29,412
+                    hash marks</strong></em> corresponds to a specific timeframe within his active years.
+              </p>
+              <p class="body-md" style="font-size:1.0625rem;">
+                The data is grouped by week and year, creating a density map that reveals the intense periods of
+                transformation and the quiet lulls of preparation. The plot took over 8 hours to complete — a meditative
+                mechanical translation of a life lived at the edge of the avant-garde.
+              </p>
+            </div>
+          </div>
+
+        </aside>
+      </div>
+    </div>
+
+    <!-- TECHNICAL PROCESS (bottom) -->
+    <section class="technical-process" aria-label="Technical process">
+      <div class="technical-process__grid">
+        <div data-fade>
+          <span class="process-step">01 / Data Ingestion</span>
+          <h3 class="process-step__title">The Algorithm</h3>
+          <p class="process-step__body">
+            We curate and research each icon's life events, translating their biographical data into mathematical
+            vectors plotted across the canvas.
+          </p>
+        </div>
+        <div data-fade>
+          <span class="process-step">02 / Mechanical Output</span>
+          <h3 class="process-step__title">Pen on Paper</h3>
+          <p class="process-step__body">
+            The NextDraw™ plotter operates with absolute precision, ensuring that every mark is placed with mathematical
+            absolute. No two lines are ever repeated.
+          </p>
+        </div>
+        <div data-fade>
+          <span class="process-step">03 / Archival Quality</span>
+          <h3 class="process-step__title">Materials</h3>
+          <p class="process-step__body">
+            Printed on heavy-weight cotton archival paper using lightfast carbon-based ink. Designed to remain as vivid
+            a century from now as the day it was plotted.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo">
+    <div>
+      <p class="footer__copy">© 2026 Shapes of Life. Archival Record No. 882.</p>
+      <div class="footer__links" style="margin-top:1rem;">
+        <a href="#" class="footer__link">Archive Policy</a>
+        <a href="#" class="footer__link">Terms of Service</a>
+        <a href="#" class="footer__link">Authenticity</a>
+      </div>
+    </div>
+    <div>
+      <p class="footer__copy" style="margin-bottom:0.25rem;">System Status: Nominal</p>
+      <p class="footer__address">Studio-04 // Birmingham, UK</p>
+    </div>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+
+</html>
