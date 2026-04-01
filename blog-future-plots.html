@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Future Plots | Studio Journal</title>
+  <link rel="stylesheet" href="styles/index.css" />
+  <style>
+    body { padding-top: var(--nav-height); }
+    .blog-header { padding: 6rem 2rem 4rem; max-width: var(--max-width); margin: 0 auto; }
+    @media (min-width: 768px) { .blog-header { padding: 8rem 3rem 4rem; text-align: center; } }
+    .blog-content { max-width: 800px; margin: 0 auto; padding: 0 2rem 8rem; }
+    .blog-content p { font-size: 1.125rem; line-height: 1.8; color: var(--on-surface-variant); margin-bottom: 2rem; }
+    .blog-content img { width: 100%; height: auto; margin: 3rem 0; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+    .blog-quote { font-family: var(--font-headline); font-size: 1.5rem; line-height: 1.4; color: var(--primary); border-left: 2px solid var(--primary); padding-left: 1.5rem; margin: 3rem 0; font-style: italic; }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">Shapes of Life</a>
+    <div class="nav__links">
+      <a href="collection.html" class="nav__link">Collection</a>
+    </div>
+    <div class="nav__actions">
+      <button class="nav__cart-btn" aria-label="Shopping cart">
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="nav__cart-count" aria-live="polite">0</span>
+      </button>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav__mobile-drawer">
+  <a href="collection.html" class="nav__link">Collection</a>
+</div>
+
+<main>
+  <header class="blog-header" data-fade>
+    <span class="label-sm" style="color:var(--outline);display:block;margin-bottom:1.5rem;letter-spacing:0.2em;text-transform:uppercase;">Studio Journal</span>
+    <h1 class="display-lg">Future Plots: Processing the Legends.</h1>
+    <p class="body-lg" style="margin-top:2rem;max-width:600px;margin-inline:auto;">A look into the upcoming releases for Shapes of Life: Exploring the '27 Club' and charting a legend in purple.</p>
+  </header>
+
+  <article class="blog-content" data-fade>
+    <p>I am currently archiving the metadata for several new intensive plots. My initial releases of David Bowie and Johnny Cash focused heavily on extremely long, sweeping timelines. Lives lived fully over many decades, packed with highs, lows, and eventual redemption.</p>
+    
+    <p>But what does a timeline look like when it burns intensely and is cut tragically short?</p>
+    
+    <div class="blog-quote">
+      "How do you mathematically capture a life that was a violent spark against an infinite dark canvas?"
+    </div>
+    
+    <p>I am currently curating the data for a brand new trilogy exploring the "27 Club." This upcoming series will map out the intense, concentrated timelines of Kurt Cobain, Jimi Hendrix, and Janis Joplin. Because their timelines are mathematically shorter, the visual density of their creative output will look fundamentally different than the plots I’ve released so far. Their prints will serve as a haunting chronometric study in acceleration and abrupt terminus.</p>
+    
+    <div style="background:var(--surface-container); border:1px dashed rgba(255,255,255,0.2); padding:4rem 2rem; text-align:center; margin: 3rem 0;">
+      <span class="label-sm" style="color:var(--outline);display:block;margin-bottom:1rem;letter-spacing:0.2em;text-transform:uppercase;">Archiving Data</span>
+      <h3 class="display-sm" style="font-family:var(--font-headline); font-style:italic;">Prince</h3>
+      <p style="margin-top:1rem; font-family:var(--font-mono); font-size:0.85rem; color:var(--primary);">Status: Signal Processing / Curating Historical Data</p>
+    </div>
+    
+    <p>In addition to the 27 Club series, I am halfway through the curation phase of plotting the timeline of Prince. This is one of the most creatively dense timelines I have ever attempted to parse. The sheer volume of recordings, alias changes, vault releases, and live performances requires an entirely new approach to tracking the 'weight' of my hash marks on the underlying algorithm.</p>
+    
+    <p>I expect to begin test prints on Hahnemühle paper by early next month.</p>
+  </article>
+</main>
+
+<footer class="footer" role="contentinfo" style="display:flex; flex-wrap:wrap; gap:4rem; justify-content:space-between;">
+  <div>
+    <p class="footer__copy">© 2026 Shapes of Life. Archival Record No. 882.</p>
+    <div class="footer__links" style="margin-top:1rem;">
+      <a href="#" class="footer__link">Archive Policy</a>
+      <a href="#" class="footer__link">Terms of Service</a>
+      <a href="#" class="footer__link">Authenticity</a>
+    </div>
+  </div>
+  <div>
+     <p class="footer__copy" style="margin-bottom:0.5rem; color:var(--on-surface);">From the Journal</p>
+     <div class="footer__links" style="flex-direction:column; gap:0.5rem; align-items:flex-start;">
+       <a href="blog-finding-the-machine.html" class="footer__link">Finding the Machine</a>
+       <a href="blog-the-original-code.html" class="footer__link">The Original Code</a>
+       <a href="blog-the-materials.html" class="footer__link">The Materials</a>
+       <a href="blog-future-plots.html" class="footer__link">Future Plots</a>
+     </div>
+  </div>
+  <div>
+    <p class="footer__copy" style="margin-bottom:0.25rem;">Studio Address</p>
+    <p class="footer__address">Unit 4, The Custard Factory, Birmingham, UK</p>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>

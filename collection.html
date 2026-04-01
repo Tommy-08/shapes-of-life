@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Collection — Shapes of Life</title>
-  <meta name="description" content="Limited edition archival pen plotter art. Browse the complete collection of life-mapped prints — David Bowie, Johnny Cash, and upcoming subjects." />
+  <title>Chronologies | Shapes of Life</title>
+  <meta name="description"
+    content="Limited edition archival pen plotter art. Browse the complete collection of life-mapped prints, including David Bowie, Johnny Cash, and upcoming subjects." />
   <link rel="stylesheet" href="styles/index.css" />
   <style>
-    body { padding-top: var(--nav-height); }
+    body {
+      padding-top: var(--nav-height);
+    }
 
     /* ---- Page Header ---- */
     .collection-header {
@@ -15,7 +19,9 @@
     }
 
     @media (min-width: 768px) {
-      .collection-header { padding: 6rem 3rem 4rem; }
+      .collection-header {
+        padding: 6rem 3rem 4rem;
+      }
     }
 
     .collection-header__inner {
@@ -34,8 +40,15 @@
       }
     }
 
-    .collection-header__left { max-width: 600px; }
-    .collection-header__right { max-width: 200px; text-align: right; }
+    .collection-header__left {
+      max-width: 600px;
+    }
+
+    .collection-header__right {
+      max-width: 200px;
+      text-align: right;
+    }
+
     .collection-header__right p {
       font-family: var(--font-label);
       font-size: 0.6875rem;
@@ -51,7 +64,9 @@
     }
 
     @media (min-width: 768px) {
-      .collection-grid-section { padding: 0 3rem 8rem; }
+      .collection-grid-section {
+        padding: 0 3rem 8rem;
+      }
     }
 
     .collection-grid {
@@ -62,8 +77,17 @@
       gap: 4rem 2.5rem;
     }
 
-    @media (min-width: 640px) { .collection-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 1024px) { .collection-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 640px) {
+      .collection-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .collection-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
 
     /* Aspect ratio for the art matte */
     .art-card__matte {
@@ -102,11 +126,13 @@
       flex-direction: column;
       justify-content: center;
       gap: 2rem;
-      border-left: 1px solid rgba(0,1,2,0.04);
+      border-left: 1px solid rgba(0, 1, 2, 0.04);
     }
 
     @media (min-width: 640px) and (max-width: 1023px) {
-      .meta-card { grid-column: span 2; }
+      .meta-card {
+        grid-column: span 2;
+      }
     }
 
     .meta-card__description {
@@ -118,174 +144,186 @@
     }
   </style>
 </head>
+
 <body>
 
-<!-- Navigation -->
-<nav class="nav" role="navigation" aria-label="Main navigation">
-  <div class="nav__inner">
-    <a href="index.html" class="nav__logo">Shapes of Life</a>
-    <div class="nav__links">
-      <a href="collection.html" class="nav__link is-active">Collection</a>
-      <a href="process.html" class="nav__link">Process</a>
-    </div>
-    <div class="nav__actions">
-      <button class="nav__cart-btn" aria-label="Shopping cart">
-        <span class="material-symbols-outlined">shopping_cart</span>
-        <span class="nav__cart-count" aria-live="polite">0</span>
-      </button>
-      <button class="nav__hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </div>
-</nav>
-
-<div class="nav__mobile-drawer">
-  <a href="collection.html" class="nav__link is-active">Collection</a>
-  <a href="process.html" class="nav__link">Process</a>
-</div>
-
-<main>
-
-  <!-- PAGE HEADER -->
-  <header class="collection-header">
-    <div class="collection-header__inner">
-      <div class="collection-header__left" data-fade>
-        <span class="label-sm" style="color:var(--outline);display:block;margin-bottom:1rem;">Archive Record v.01</span>
-        <h1 class="display-lg" style="line-height:0.88;letter-spacing:-0.03em;">The Archival<br />Collection.</h1>
+  <!-- Navigation -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">Shapes of Life</a>
+      <div class="nav__links">
+        <a href="collection.html" class="nav__link is-active">Collection</a>
       </div>
-      <div class="collection-header__right" data-fade>
-        <p>Visualizing the timelines of iconic artists through ink, paper, and code.</p>
+      <div class="nav__actions">
+        <button class="nav__cart-btn" aria-label="Shopping cart">
+          <span class="material-symbols-outlined">shopping_cart</span>
+          <span class="nav__cart-count" aria-live="polite">0</span>
+        </button>
+        <button class="nav__hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
-  </header>
+  </nav>
 
-  <!-- COLLECTION GRID -->
-  <section class="collection-grid-section" aria-label="Collection grid">
-    <div class="collection-grid">
+  <div class="nav__mobile-drawer">
+    <a href="collection.html" class="nav__link is-active">Collection</a>
+  </div>
 
-      <!-- David Bowie -->
-      <article class="art-card" data-fade>
-        <a href="detail.html" class="art-card__matte" aria-label="View David Bowie artwork">
-          <img class="art-card__img" src="assets/images/IMG_4534.jpg" alt="David Bowie life timeline pen plot art" />
-          <span class="art-card__badge">Cat. No 001</span>
-        </a>
-        <div class="art-card__meta">
-          <h2 class="art-card__title">David Bowie</h2>
-          <span class="art-card__dates">1947 — 2016</span>
-        </div>
-        <div class="art-card__divider"></div>
-        <div class="art-card__footer">
-          <span class="art-card__edition">Limited Edition — 22/50 remaining</span>
-          <a href="detail.html" class="art-card__acquire js-acquire">Acquire</a>
-        </div>
-      </article>
+  <main>
 
-      <!-- Johnny Cash -->
-      <article class="art-card" data-fade>
-        <a href="detail.html" class="art-card__matte" aria-label="View Johnny Cash artwork">
-          <img class="art-card__img" src="assets/images/IMG_4536.jpg" alt="Johnny Cash life timeline pen plot art" />
-          <span class="art-card__badge">Cat. No 002</span>
-        </a>
-        <div class="art-card__meta">
-          <h2 class="art-card__title">Johnny Cash</h2>
-          <span class="art-card__dates">1932 — 2003</span>
+    <!-- PAGE HEADER -->
+    <header class="collection-header">
+      <div class="collection-header__inner">
+        <div class="collection-header__left" data-fade>
+          <span class="label-sm" style="color:var(--outline);display:block;margin-bottom:1rem;">Archive Record
+            v.01</span>
+          <h1 class="display-lg" style="line-height:0.88;letter-spacing:-0.03em;">Chronologies</h1>
         </div>
-        <div class="art-card__divider"></div>
-        <div class="art-card__footer">
-          <span class="art-card__edition">Limited Edition — 14/50 remaining</span>
-          <a href="detail.html" class="art-card__acquire js-acquire">Acquire</a>
+        <div class="collection-header__right" data-fade>
+          <p>Visualizing the timelines of iconic artists through ink, paper, and code.</p>
         </div>
-      </article>
-
-      <!-- Upcoming: Prince -->
-      <article class="art-card art-card--upcoming" data-fade>
-        <div class="upcoming-placeholder">
-          <div class="upcoming-placeholder__inner">
-            <span class="label-sm" style="color:var(--outline);">In Plotting</span>
-            <p class="upcoming-placeholder__title">Prince</p>
-            <p class="label-sm" style="color:var(--outline);margin-top:0.5rem;font-style:italic;">Scheduled Release Q3</p>
-          </div>
-        </div>
-        <div class="art-card__meta">
-          <h2 class="art-card__title">Upcoming</h2>
-          <span class="art-card__dates">Coming Soon</span>
-        </div>
-      </article>
-
-      <!-- Upcoming: Kurt Cobain -->
-      <article class="art-card art-card--upcoming" data-fade>
-        <div class="upcoming-placeholder">
-          <div class="upcoming-placeholder__inner">
-            <span class="label-sm" style="color:var(--outline);">Archiving Data</span>
-            <p class="upcoming-placeholder__title">Kurt Cobain</p>
-          </div>
-        </div>
-        <div class="art-card__meta">
-          <h2 class="art-card__title">Upcoming</h2>
-          <span class="art-card__dates">Coming Soon</span>
-        </div>
-      </article>
-
-      <!-- Upcoming: Jimi Hendrix -->
-      <article class="art-card art-card--upcoming" data-fade>
-        <div class="upcoming-placeholder">
-          <div class="upcoming-placeholder__inner">
-            <span class="label-sm" style="color:var(--outline);">Signal Processing</span>
-            <p class="upcoming-placeholder__title">Jimi Hendrix</p>
-          </div>
-        </div>
-        <div class="art-card__meta">
-          <h2 class="art-card__title">Upcoming</h2>
-          <span class="art-card__dates">Coming Soon</span>
-        </div>
-      </article>
-
-      <!-- Metadata utility card -->
-      <div class="meta-card" data-fade>
-        <div>
-          <span class="label-sm" style="color:var(--outline);">Process Metadata</span>
-          <p class="meta-card__description" style="margin-top:1rem;">
-            Each plot represents a 1:1 mapping of biological frequency. No two curves are identical, as no two lives are lived the same.
-          </p>
-        </div>
-        <ul class="spec-table">
-          <li class="spec-row">
-            <span class="spec-row__key">Paper Stock</span>
-            <span class="spec-row__val">Hahnemühle 308gsm</span>
-          </li>
-          <li class="spec-row">
-            <span class="spec-row__key">Ink Profile</span>
-            <span class="spec-row__val">Carbon Pigment</span>
-          </li>
-          <li class="spec-row">
-            <span class="spec-row__key">Dimensions</span>
-            <span class="spec-row__val">700mm × 1000mm</span>
-          </li>
-        </ul>
-        <a href="process.html" class="btn-primary" style="text-align:center;">View Technical Docs</a>
       </div>
+    </header>
 
+    <!-- COLLECTION GRID -->
+    <section class="collection-grid-section" aria-label="Collection grid">
+      <div class="collection-grid">
+
+        <!-- David Bowie -->
+        <article class="art-card" data-fade>
+          <a href="detail.html" class="art-card__matte" aria-label="View David Bowie artwork">
+            <img class="art-card__img" src="assets/images/IMG_4534.jpg" alt="David Bowie life timeline pen plot art" />
+            <span class="art-card__badge">Cat. No 001</span>
+          </a>
+          <div class="art-card__meta">
+            <h2 class="art-card__title">David Bowie</h2>
+            <span class="art-card__dates">1947 - 2016</span>
+          </div>
+          <div class="art-card__divider"></div>
+          <div class="art-card__footer">
+            <span class="art-card__edition">Limited Edition, 22/50 remaining</span>
+            <a href="detail.html" class="art-card__acquire js-acquire">Acquire</a>
+          </div>
+        </article>
+
+        <!-- Johnny Cash -->
+        <article class="art-card" data-fade>
+          <a href="detail.html" class="art-card__matte" aria-label="View Johnny Cash artwork">
+            <img class="art-card__img" src="assets/images/IMG_4536.jpg" alt="Johnny Cash life timeline pen plot art" />
+            <span class="art-card__badge">Cat. No 002</span>
+          </a>
+          <div class="art-card__meta">
+            <h2 class="art-card__title">Johnny Cash</h2>
+            <span class="art-card__dates">1932 - 2003</span>
+          </div>
+          <div class="art-card__divider"></div>
+          <div class="art-card__footer">
+            <span class="art-card__edition">Limited Edition, 14/50 remaining</span>
+            <a href="detail.html" class="art-card__acquire js-acquire">Acquire</a>
+          </div>
+        </article>
+
+        <!-- Upcoming: Prince -->
+        <article class="art-card art-card--upcoming" data-fade>
+          <div class="upcoming-placeholder">
+            <div class="upcoming-placeholder__inner">
+              <span class="label-sm" style="color:var(--outline);">In Plotting</span>
+              <p class="upcoming-placeholder__title">Prince</p>
+              <p class="label-sm" style="color:var(--outline);margin-top:0.5rem;font-style:italic;">Scheduled Release Q3
+              </p>
+            </div>
+          </div>
+          <div class="art-card__meta">
+            <h2 class="art-card__title">Upcoming</h2>
+            <span class="art-card__dates">Coming Soon</span>
+          </div>
+        </article>
+
+        <!-- Upcoming: Kurt Cobain -->
+        <article class="art-card art-card--upcoming" data-fade>
+          <div class="upcoming-placeholder">
+            <div class="upcoming-placeholder__inner">
+              <span class="label-sm" style="color:var(--outline);">Archiving Data</span>
+              <p class="upcoming-placeholder__title">Kurt Cobain</p>
+            </div>
+          </div>
+          <div class="art-card__meta">
+            <h2 class="art-card__title">Upcoming</h2>
+            <span class="art-card__dates">Coming Soon</span>
+          </div>
+        </article>
+
+        <!-- Upcoming: Jimi Hendrix -->
+        <article class="art-card art-card--upcoming" data-fade>
+          <div class="upcoming-placeholder">
+            <div class="upcoming-placeholder__inner">
+              <span class="label-sm" style="color:var(--outline);">Signal Processing</span>
+              <p class="upcoming-placeholder__title">Jimi Hendrix</p>
+            </div>
+          </div>
+          <div class="art-card__meta">
+            <h2 class="art-card__title">Upcoming</h2>
+            <span class="art-card__dates">Coming Soon</span>
+          </div>
+        </article>
+
+        <!-- Metadata utility card -->
+        <div class="meta-card" data-fade>
+          <div>
+            <span class="label-sm" style="color:var(--outline);">Process Metadata</span>
+            <p class="meta-card__description" style="margin-top:1rem;">
+              Each plot represents a 1:1 mapping of biological frequency. No two lines are identical, as no two lives
+              are lived the same.
+            </p>
+          </div>
+          <ul class="spec-table">
+            <li class="spec-row">
+              <span class="spec-row__key">Paper Stock</span>
+              <span class="spec-row__val">Hahnemühle 308gsm</span>
+            </li>
+            <li class="spec-row">
+              <span class="spec-row__key">Ink Profile</span>
+              <span class="spec-row__val">Carbon Pigment</span>
+            </li>
+            <li class="spec-row">
+              <span class="spec-row__key">Dimensions</span>
+              <span class="spec-row__val">700mm × 1000mm</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer" role="contentinfo"
+    style="display:flex; flex-wrap:wrap; gap:4rem; justify-content:space-between;">
+    <div>
+      <p class="footer__copy">© 2026 Shapes of Life. Archival Record No. 882.</p>
+      <div class="footer__links" style="margin-top:1rem;">
+        <a href="#" class="footer__link">Archive Policy</a>
+        <a href="#" class="footer__link">Terms of Service</a>
+        <a href="#" class="footer__link">Authenticity</a>
+      </div>
     </div>
-  </section>
-
-</main>
-
-<footer class="footer" role="contentinfo">
-  <div>
-    <p class="footer__copy">© 2026 Shapes of Life. Archival Record No. 882.</p>
-    <div class="footer__links" style="margin-top:1rem;">
-      <a href="#" class="footer__link">Archive Policy</a>
-      <a href="#" class="footer__link">Terms of Service</a>
-      <a href="#" class="footer__link">Authenticity</a>
+    <div>
+      <p class="footer__copy" style="margin-bottom:0.5rem; color:var(--on-surface);">From the Journal</p>
+      <div class="footer__links" style="flex-direction:column; gap:0.5rem; align-items:flex-start;">
+        <a href="blog-finding-the-machine.html" class="footer__link">Finding the Machine</a>
+        <a href="blog-the-original-code.html" class="footer__link">The Original Code</a>
+        <a href="blog-the-materials.html" class="footer__link">The Materials</a>
+        <a href="blog-future-plots.html" class="footer__link">Future Plots</a>
+      </div>
     </div>
-  </div>
-  <div>
-    <p class="footer__copy" style="margin-bottom:0.25rem;">Studio Address</p>
-    <p class="footer__address">Unit 4, The Custard Factory, Birmingham, UK</p>
-  </div>
-</footer>
+    <div>
+      <p class="footer__copy" style="margin-bottom:0.25rem;">Studio Address</p>
+      <p class="footer__address">Unit 4, The Custard Factory, Birmingham, UK</p>
+    </div>
+  </footer>
 
-<script src="scripts/main.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
+
 </html>

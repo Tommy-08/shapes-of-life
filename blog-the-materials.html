@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Materials | Studio Journal</title>
+  <link rel="stylesheet" href="styles/index.css" />
+  <style>
+    body { padding-top: var(--nav-height); }
+    .blog-header { padding: 6rem 2rem 4rem; max-width: var(--max-width); margin: 0 auto; }
+    @media (min-width: 768px) { .blog-header { padding: 8rem 3rem 4rem; text-align: center; } }
+    .blog-content { max-width: 800px; margin: 0 auto; padding: 0 2rem 8rem; }
+    .blog-content p { font-size: 1.125rem; line-height: 1.8; color: var(--on-surface-variant); margin-bottom: 2rem; }
+    .blog-content img { width: 100%; height: auto; margin: 3rem 0; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+    .blog-quote { font-family: var(--font-headline); font-size: 1.5rem; line-height: 1.4; color: var(--primary); border-left: 2px solid var(--primary); padding-left: 1.5rem; margin: 3rem 0; font-style: italic; }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">Shapes of Life</a>
+    <div class="nav__links">
+      <a href="collection.html" class="nav__link">Collection</a>
+    </div>
+    <div class="nav__actions">
+      <button class="nav__cart-btn" aria-label="Shopping cart">
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="nav__cart-count" aria-live="polite">0</span>
+      </button>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav__mobile-drawer">
+  <a href="collection.html" class="nav__link">Collection</a>
+</div>
+
+<main>
+  <header class="blog-header" data-fade>
+    <span class="label-sm" style="color:var(--outline);display:block;margin-bottom:1.5rem;letter-spacing:0.2em;text-transform:uppercase;">Studio Journal</span>
+    <h1 class="display-lg">The Materials.</h1>
+    <p class="body-lg" style="margin-top:2rem;max-width:600px;margin-inline:auto;">Investigating the subtle perfection of pens, paper, and plotter dynamics.</p>
+  </header>
+
+  <article class="blog-content" data-fade>
+    <p>A digital file is perfect, weightless, and infinitely replicable. Physical artwork is none of those things. The second you introduce an incredibly sharp fountain pen loaded with liquid ink to a sheet of dense cotton, you introduce physics to perfection. The result is where the magic lies.</p>
+    
+    <p>Finding the right combination of materials took months of expensive trial and error. I knew from the onset that creating archival art meant avoiding standard printer paper or cheap ballpoints. If I am mapping out the timeline of a legendary human being, the paper itself needs to hold a specific gravitas.</p>
+
+    <div class="blog-quote">
+      "You don't just see the artwork; your eye feels the friction where the nib caught the cotton grain."
+    </div>
+    
+    <img src="assets/images/IMG_4493.jpg" alt="Macro view of pen plot ink on textured 300gsm paper" />
+
+    <p>I settled exclusively on 300gsm acid-free cotton rag. It's thick, highly textured, and incredibly thirsty. When the plotter drops the 0.1mm technical pen onto it, the ink is absorbed aggressively, creating a distinct micro-bleed that softens the digital sterility of the vector path.</p>
+    
+    <p>Paired with a lightfast carbon-based pigment ink (specifically formulated to resist UV decay), the result is an object designed to outlive the person who plotted it. The tactility is undeniable; run your hand across it lightly, and you can feel the slight indentations of over 29,000 distinct pen strokes.</p>
+  </article>
+</main>
+
+<footer class="footer" role="contentinfo" style="display:flex; flex-wrap:wrap; gap:4rem; justify-content:space-between;">
+  <div>
+    <p class="footer__copy">© 2026 Shapes of Life. Archival Record No. 882.</p>
+    <div class="footer__links" style="margin-top:1rem;">
+      <a href="#" class="footer__link">Archive Policy</a>
+      <a href="#" class="footer__link">Terms of Service</a>
+      <a href="#" class="footer__link">Authenticity</a>
+    </div>
+  </div>
+  <div>
+     <p class="footer__copy" style="margin-bottom:0.5rem; color:var(--on-surface);">From the Journal</p>
+     <div class="footer__links" style="flex-direction:column; gap:0.5rem; align-items:flex-start;">
+       <a href="blog-finding-the-machine.html" class="footer__link">Finding the Machine</a>
+       <a href="blog-the-original-code.html" class="footer__link">The Original Code</a>
+       <a href="blog-the-materials.html" class="footer__link">The Materials</a>
+       <a href="blog-future-plots.html" class="footer__link">Future Plots</a>
+     </div>
+  </div>
+  <div>
+    <p class="footer__copy" style="margin-bottom:0.25rem;">Studio Address</p>
+    <p class="footer__address">Unit 4, The Custard Factory, Birmingham, UK</p>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>

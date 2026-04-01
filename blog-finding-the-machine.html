@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Finding the Machine | Studio Journal</title>
+  <link rel="stylesheet" href="styles/index.css" />
+  <style>
+    body { padding-top: var(--nav-height); }
+    .blog-header {
+      padding: 6rem 2rem 4rem;
+      max-width: var(--max-width);
+      margin: 0 auto;
+    }
+    @media (min-width: 768px) {
+      .blog-header { padding: 8rem 3rem 4rem; text-align: center; }
+    }
+    .blog-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem 8rem;
+    }
+    .blog-content p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: var(--on-surface-variant);
+      margin-bottom: 2rem;
+    }
+    .blog-content img {
+      width: 100%;
+      height: auto;
+      margin: 3rem 0;
+      border: 1px solid var(--outline-variant);
+    }
+    .blog-quote {
+      font-family: var(--font-headline);
+      font-size: 1.5rem;
+      line-height: 1.4;
+      color: var(--primary);
+      border-left: 2px solid var(--primary);
+      padding-left: 1.5rem;
+      margin: 3rem 0;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">Shapes of Life</a>
+    <div class="nav__links">
+      <a href="collection.html" class="nav__link">Collection</a>
+    </div>
+    <div class="nav__actions">
+      <button class="nav__cart-btn" aria-label="Shopping cart">
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="nav__cart-count" aria-live="polite">0</span>
+      </button>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav__mobile-drawer">
+  <a href="collection.html" class="nav__link">Collection</a>
+</div>
+
+<main>
+  <header class="blog-header" data-fade>
+    <span class="label-sm" style="color:var(--outline);display:block;margin-bottom:1.5rem;letter-spacing:0.2em;text-transform:uppercase;">Studio Journal</span>
+    <h1 class="display-lg">Finding the Machine.</h1>
+    <p class="body-lg" style="margin-top:2rem;max-width:600px;margin-inline:auto;">The journey of discovering, learning, and mastering my first pen plotter.</p>
+  </header>
+
+  <article class="blog-content" data-fade>
+    <p>Everything starts with an idea, but without the physical infrastructure to bridge the gap between imagination and reality, it remains just that: an idea. Years of my life had been spent manipulating pixels and vectors across screens, safely executing <span style="font-family:var(--font-mono); font-size: 0.9em; background:var(--surface-container); padding:0.2em 0.4em;">ctrl-z</span> when things didn't go strictly to plan.</p>
+    
+    <p>Then came the plotter. Finding the machine wasn’t just about making a purchase; it was a fundamental shift in philosophy. A machine that draws with an actual fountain pen behaves entirely differently than a digital printer. It brings back the inherent risks, friction, and happy accidents of physical medium.</p>
+    
+    <div class="blog-quote">
+      "The pen doesn't glide in a vacuum. It stutters against the grain of the paper. It bleeds. It pauses. It performs."
+    </div>
+    
+    <p>When I finally got my hands on the Bantam Tools NextDraw large format plotter, I spent weeks just staring at it operate. Setting it up requires learning a strange dance of calibrating pen heights, diagnosing servo motor jitter, and trusting a mechanical arm to map out thousands of precise vectors over hours without a single failure.</p>
+    
+    <img src="assets/images/IMG_4500.jpg" alt="Close up texture of the plotter on archival paper" />
+    
+    <p>Mastering this was more than reading a manual. It became a process of understanding mechanical language. If a plot fails three hours into an eight-hour session, there is no undo button. You lose the paper, the ink, and the time. It forces an extraordinary level of precision and patience, slowing the act of creation down to a pace that suddenly feels profoundly human.</p>
+  </article>
+</main>
+
+<footer class="footer" role="contentinfo" style="display:flex; flex-wrap:wrap; gap:4rem; justify-content:space-between;">
+  <div>
+    <p class="footer__copy">© 2026 Shapes of Life. Archival Record No. 882.</p>
+    <div class="footer__links" style="margin-top:1rem;">
+      <a href="#" class="footer__link">Archive Policy</a>
+      <a href="#" class="footer__link">Terms of Service</a>
+      <a href="#" class="footer__link">Authenticity</a>
+    </div>
+  </div>
+  <div>
+     <p class="footer__copy" style="margin-bottom:0.5rem; color:var(--on-surface);">From the Journal</p>
+     <div class="footer__links" style="flex-direction:column; gap:0.5rem; align-items:flex-start;">
+       <a href="blog-finding-the-machine.html" class="footer__link">Finding the Machine</a>
+       <a href="blog-the-original-code.html" class="footer__link">The Original Code</a>
+       <a href="blog-the-materials.html" class="footer__link">The Materials</a>
+       <a href="blog-future-plots.html" class="footer__link">Future Plots</a>
+     </div>
+  </div>
+  <div>
+    <p class="footer__copy" style="margin-bottom:0.25rem;">Studio Address</p>
+    <p class="footer__address">Unit 4, The Custard Factory, Birmingham, UK</p>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>

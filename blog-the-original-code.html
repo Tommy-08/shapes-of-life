@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Original Code | Studio Journal</title>
+  <link rel="stylesheet" href="styles/index.css" />
+  <style>
+    body { padding-top: var(--nav-height); }
+    .blog-header { padding: 6rem 2rem 4rem; max-width: var(--max-width); margin: 0 auto; }
+    @media (min-width: 768px) { .blog-header { padding: 8rem 3rem 4rem; text-align: center; } }
+    .blog-content { max-width: 800px; margin: 0 auto; padding: 0 2rem 8rem; }
+    .blog-content p { font-size: 1.125rem; line-height: 1.8; color: var(--on-surface-variant); margin-bottom: 2rem; }
+    .blog-content img { width: 100%; height: auto; margin: 3rem 0; box-shadow: 0 20px 60px rgba(0,0,0,0.12); }
+    .blog-quote { font-family: var(--font-headline); font-size: 1.5rem; line-height: 1.4; color: var(--primary); border-left: 2px solid var(--primary); padding-left: 1.5rem; margin: 3rem 0; font-style: italic; }
+  </style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">Shapes of Life</a>
+    <div class="nav__links">
+      <a href="collection.html" class="nav__link">Collection</a>
+    </div>
+    <div class="nav__actions">
+      <button class="nav__cart-btn" aria-label="Shopping cart">
+        <span class="material-symbols-outlined">shopping_cart</span>
+        <span class="nav__cart-count" aria-live="polite">0</span>
+      </button>
+      <button class="nav__hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</nav>
+
+<div class="nav__mobile-drawer">
+  <a href="collection.html" class="nav__link">Collection</a>
+</div>
+
+<main>
+  <header class="blog-header" data-fade>
+    <span class="label-sm" style="color:var(--outline);display:block;margin-bottom:1.5rem;letter-spacing:0.2em;text-transform:uppercase;">Studio Journal</span>
+    <h1 class="display-lg">The Original Code.</h1>
+    <p class="body-lg" style="margin-top:2rem;max-width:600px;margin-inline:auto;">A multi-year journey of writing and discovering exactly what I wanted from generative systems.</p>
+  </header>
+
+  <article class="blog-content" data-fade>
+    <p>Writing the original algorithm that powers Shapes of Life was a project that spanned almost two years (2024-2026). It started as a simple Python script looking at basic vector outputs, but quickly evolved into an obsession with mathematically capturing history.</p>
+    
+    <div class="blog-quote">
+      "The goal wasn't just to make data look pretty. The goal was to write logic deterministic enough to map an entire life faithfully, and chaotic enough to simulate gravity."
+    </div>
+    
+    <p>Initially, I experimented with raw coordinates, just trying to feed JSON life events into an array that a plotter could comprehend. But lines quickly look mechanical if they lack rhythm. I spent the entirety of 2025 tweaking exactly how the "Hash Marks" felt on the page. How does it look when an artist takes a three-year hiatus? How does the code draw a line differently if a milestone is particularly monumental?</p>
+
+    <div style="background:var(--surface-container); padding: 2rem; border-radius: 4px; font-family: var(--font-mono); font-size: 0.85rem; color: var(--primary); margin: 3rem 0; overflow-x: auto;">
+      <pre><code>def _jittered_vertical_xs(start_x, w):
+    points = []
+    points.append(start_x + w * 0.1 * random.uniform(0.5, 1.5))
+    points.append(start_x + w * 0.25 * random.uniform(0.8, 1.2))
+    points.append(start_x + w * 0.45 * random.uniform(0.9, 1.1))
+    ...</code></pre>
+    </div>
+    
+    <p>That realization—that I could introduce calculated "jitter" simulating the imperfections of human memory—was a breakthrough. The system began generating SVGs populated with tens of thousands of lines that felt inherently organic, yet structurally tied entirely to hard metadata and history.</p>
+  </article>
+</main>
+
+<footer class="footer" role="contentinfo" style="display:flex; flex-wrap:wrap; gap:4rem; justify-content:space-between;">
+  <div>
+    <p class="footer__copy">© 2026 Shapes of Life. Archival Record No. 882.</p>
+    <div class="footer__links" style="margin-top:1rem;">
+      <a href="#" class="footer__link">Archive Policy</a>
+      <a href="#" class="footer__link">Terms of Service</a>
+      <a href="#" class="footer__link">Authenticity</a>
+    </div>
+  </div>
+  <div>
+     <p class="footer__copy" style="margin-bottom:0.5rem; color:var(--on-surface);">From the Journal</p>
+     <div class="footer__links" style="flex-direction:column; gap:0.5rem; align-items:flex-start;">
+       <a href="blog-finding-the-machine.html" class="footer__link">Finding the Machine</a>
+       <a href="blog-the-original-code.html" class="footer__link">The Original Code</a>
+       <a href="blog-the-materials.html" class="footer__link">The Materials</a>
+       <a href="blog-future-plots.html" class="footer__link">Future Plots</a>
+     </div>
+  </div>
+  <div>
+    <p class="footer__copy" style="margin-bottom:0.25rem;">Studio Address</p>
+    <p class="footer__address">Unit 4, The Custard Factory, Birmingham, UK</p>
+  </div>
+</footer>
+
+<script src="scripts/main.js"></script>
+</body>
+</html>

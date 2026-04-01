@@ -4,12 +4,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Shapes of Life — Archival Pen Plotter Art</title>
+  <title>Shapes of Life: Archival Pen Plotter Art</title>
   <meta name="description"
-    content="Limited edition pen plotter art translating the lives of music icons into 29,000+ hand-plotted hash marks. David Bowie. Johnny Cash. And more." />
+    content="Archival pen plotter art translating the lives of music icons into 29,000+ hand-plotted hash marks. David Bowie. Johnny Cash. And more." />
   <link rel="stylesheet" href="styles/index.css" />
   <style>
-    /* ---- Hero ---- */
+    /* ---- Index + Process Merged Styles ---- */
+
+    /* ---- HOMEPAGE HERO ---- */
     .hero {
       position: relative;
       min-height: 100svh;
@@ -25,11 +27,11 @@
       z-index: 0;
     }
 
-    .hero__bg img {
+    .hero__bg video {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: center top;
+      object-position: center;
       filter: grayscale(1) brightness(1.06);
       opacity: 0.88;
     }
@@ -96,101 +98,385 @@
       margin-top: 0.25rem;
     }
 
-    /* ---- Process Section ---- */
-    .process-section {
-      padding: 8rem 2rem;
-      background: var(--surface-low);
-    }
-
-    @media (min-width: 768px) {
-      .process-section {
-        padding: 8rem 3rem;
-      }
-    }
-
-    .process-section__container {
+    /* ---- PROCESS HERO (Adapted to 2-col) ---- */
+    .process-hero {
+      padding: 6rem 2rem 8rem;
       max-width: var(--max-width);
       margin: 0 auto;
     }
 
-    .process-header {
-      display: flex;
-      flex-direction: column;
-      gap: 3rem;
-      margin-bottom: 6rem;
-    }
-
     @media (min-width: 768px) {
-      .process-header {
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: flex-start;
+      .process-hero {
+        padding: 6rem 3rem 10rem;
       }
     }
 
-    .process-header__left {
-      max-width: 540px;
-    }
-
-    .process-header__right {
-      max-width: 320px;
-      border-left: 1px solid rgba(117, 119, 122, 0.2);
-      padding-left: 2rem;
-    }
-
-    .process-header__right .spec-table {
-      margin-top: 1.5rem;
-    }
-
-    .process-phases {
+    .process-hero__grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 1px;
+      gap: 3rem;
     }
 
     @media (min-width: 768px) {
-      .process-phases {
-        grid-template-columns: repeat(3, 1fr);
+      .process-hero__grid {
+        grid-template-columns: 7fr 5fr;
+        align-items: center;
+        gap: 4rem;
       }
     }
 
-    .phase-card {
-      background: var(--surface);
+    .process-hero__right {
+      aspect-ratio: 16 / 9;
+      background: var(--surface-container);
+      border: 1px solid rgba(197, 198, 202, 0.25);
+      position: relative;
       overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
-    .phase-card:nth-child(2) {
-      margin-top: 0;
-    }
-
-    @media (min-width: 768px) {
-      .phase-card:nth-child(2) {
-        margin-top: 6rem;
-      }
-    }
-
-    .phase-card__img {
-      aspect-ratio: 3 / 4;
-      overflow: hidden;
-    }
-
-    .phase-card__img img {
+    .process-hero__right video {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.7s ease;
       filter: grayscale(1);
     }
 
-    .phase-card:hover .phase-card__img img {
-      transform: scale(1.04);
+    /* ---- PROCESS SECTIONS ---- */
+    .sections-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 10rem;
+      padding-bottom: 4rem;
     }
 
-    .phase-card__body {
-      padding: 1.5rem;
+    @media (min-width: 768px) {
+      .sections-wrapper {
+        gap: 14rem;
+      }
     }
 
-    /* ---- Gallery Teaser ---- */
+    .process-block {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+
+    @media (min-width: 768px) {
+      .process-block {
+        padding: 0 3rem;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+        align-items: start;
+      }
+    }
+
+    .process-block__text {
+      grid-column: 1;
+      border-top: 1px solid rgba(197, 198, 202, 0.25);
+      padding-top: 2rem;
+    }
+
+    .process-block__visual {
+      grid-column: 1;
+    }
+
+    .process-block--ltr .process-block__text {
+      order: 1;
+    }
+
+    .process-block--ltr .process-block__visual {
+      order: 2;
+    }
+
+    .process-block--rtl .process-block__visual {
+      order: 1;
+    }
+
+    .process-block--rtl .process-block__text {
+      order: 2;
+    }
+
+    @media (min-width: 768px) {
+      .process-block--ltr .process-block__text {
+        grid-column: 1 / 5;
+        order: 1;
+      }
+
+      .process-block--ltr .process-block__visual {
+        grid-column: 5 / 13;
+        order: 2;
+      }
+
+      .process-block--rtl .process-block__visual {
+        grid-column: 1 / 9;
+        order: 1;
+      }
+
+      .process-block--rtl .process-block__text {
+        grid-column: 9 / 13;
+        order: 2;
+      }
+    }
+
+    /* Hash Animation */
+    .hash-animation {
+      background: var(--surface-container);
+      border: 1px solid rgba(197, 198, 202, 0.3);
+      height: 400px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hash-svg {
+      width: 100%;
+      max-width: 380px;
+      height: auto;
+      stroke: var(--primary);
+      stroke-width: 1.5;
+      stroke-linecap: square;
+      fill: none;
+      opacity: 0.85;
+    }
+
+    .hash-line {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+    }
+
+    .hash-line.draw {
+      animation: dash 1.1s linear forwards;
+    }
+
+    @keyframes dash {
+      to {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    .hash-metrics {
+      display: flex;
+      gap: 3rem;
+      margin-top: 2rem;
+      font-family: var(--font-label);
+      text-transform: uppercase;
+    }
+
+    .hash-metric {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .metric-val {
+      font-family: var(--font-headline);
+      font-size: 1.5rem;
+      font-style: italic;
+      color: var(--primary);
+      font-weight: 300;
+      text-transform: none;
+      font-variant-numeric: tabular-nums;
+      width: 180px;
+      text-align: center;
+      white-space: nowrap;
+    }
+
+    .metric-label {
+      font-size: 0.625rem;
+      letter-spacing: 0.15em;
+      color: var(--outline);
+    }
+
+    /* Code Block Interactive Animation */
+    .algo-svg {
+      transition: opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .code-block--interactive:hover .algo-svg,
+    .code-block--interactive:focus .algo-svg {
+      opacity: 1;
+    }
+
+    .code-block--interactive:hover .interactive-status {
+      color: var(--primary);
+    }
+
+    .code-block--interactive .interactive-status::after {
+      content: "Hover to execute";
+    }
+
+    .code-block--interactive:hover .interactive-status::after {
+      content: "Executing algorithm...";
+    }
+
+    .algo-line {
+      stroke-dasharray: 100;
+      stroke-dashoffset: 100;
+    }
+
+    .code-block--interactive:hover .algo-line {
+      animation: algoDash 0.6s ease forwards;
+    }
+
+    @keyframes algoDash {
+      0% {
+        stroke-dashoffset: 100;
+      }
+
+      100% {
+        stroke-dashoffset: 0;
+      }
+    }
+
+    /* Special Layout for Pen & Paper + Machine */
+    .machine-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .machine-grid__top {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.5rem;
+    }
+
+    .machine-grid__top img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      filter: grayscale(1);
+    }
+
+    .machine-grid__bottom video {
+      width: 100%;
+      aspect-ratio: 21 / 9;
+      object-fit: cover;
+      filter: grayscale(1);
+      display: block;
+    }
+
+    /* Canvas Placeholder */
+    .canvas-placeholder {
+      aspect-ratio: 19 / 24;
+      background: var(--surface-container);
+      border: 1px solid rgba(197, 198, 202, 0.25);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .canvas-placeholder__label {
+      position: absolute;
+      bottom: 1.5rem;
+      right: 1.5rem;
+    }
+
+    /* ---- ORIGIN STORY ---- */
+    .origin-section {
+      background: var(--surface-low);
+      padding: 0 0 4rem;
+      margin-top: 8rem;
+    }
+
+    .origin-section__header {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 6rem 2rem 5rem;
+    }
+
+    @media (min-width: 768px) {
+      .origin-section__header {
+        padding: 6rem 3rem 5rem;
+      }
+    }
+
+    .origin-blocks {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .origin-block {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 3rem;
+      border-top: 1px solid rgba(197, 198, 202, 0.2);
+      width: 100%;
+    }
+
+    @media (min-width: 768px) {
+      .origin-block {
+        padding: 5rem 3rem;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 2rem;
+        align-items: start;
+      }
+
+      .origin-block--ltr .origin-block__text {
+        grid-column: 1 / 5;
+        order: 1;
+      }
+
+      .origin-block--ltr .origin-block__visual {
+        grid-column: 5 / 13;
+        order: 2;
+      }
+
+      .origin-block--rtl .origin-block__visual {
+        grid-column: 1 / 9;
+        order: 1;
+      }
+
+      .origin-block--rtl .origin-block__text {
+        grid-column: 9 / 13;
+        order: 2;
+      }
+    }
+
+    .origin-block__text {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .origin-block__visual {
+      overflow: hidden;
+    }
+
+    .origin-block__visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      filter: grayscale(0.15);
+      aspect-ratio: 4 / 3;
+    }
+
+    .origin-caption {
+      margin-top: 0.5rem;
+      font-family: var(--font-label);
+      font-size: 0.5625rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--outline);
+    }
+
+    /* ---- GALLERY TEASER ---- */
     .gallery-section {
       padding: 8rem 2rem;
       background: var(--surface);
@@ -233,10 +519,6 @@
       display: flex;
       flex-direction: column;
       gap: 2rem;
-    }
-
-    .gallery-item:nth-child(2) {
-      padding-top: 0;
     }
 
     @media (min-width: 768px) {
@@ -304,7 +586,6 @@
       <a href="index.html" class="nav__logo">Shapes of Life</a>
       <div class="nav__links">
         <a href="collection.html" class="nav__link">Collection</a>
-        <a href="process.html" class="nav__link">Process</a>
       </div>
       <div class="nav__actions">
         <button class="nav__cart-btn" aria-label="Shopping cart">
@@ -318,174 +599,313 @@
     </div>
   </nav>
 
-  <!-- Mobile Drawer -->
-  <div class="nav__mobile-drawer" aria-hidden="true">
-    <a href="collection.html" class="nav__link">Collection</a>
-    <a href="process.html" class="nav__link">Process</a>
-  </div>
-
   <main>
-
-    <!-- HERO -->
+    <!-- Section 1: Hero Video -->
     <section class="hero" aria-label="Hero">
       <div class="hero__bg">
-        <video src="assets/videos/IMG_4499.mp4" autoplay loop muted playsinline
-          style="width: 100%; height: 100%; object-fit: cover;"></video>
+        <video src="assets/videos/IMG_4499.mp4" autoplay loop muted playsinline></video>
         <div class="hero__gradient"></div>
       </div>
-
       <div class="hero__content" data-fade>
-        <p class="label-sm hero__kicker">Record No. 001 — David Bowie</p>
+        <p class="label-sm hero__kicker">Record No. 001: David Bowie</p>
         <h1 class="display-lg hero__headline ink-bleed">
           The Shape of a Life.
         </h1>
         <p class="body-lg hero__sub">
-          Visualizing the lives of music icons through ink and paper.
+          Every individual line is a day and every group of hash marks (which are made up of 6 vertical and one
+          horizontal) is a week. Each full row represents a full year. The whole piece is a life.
         </p>
         <div class="hero__ctas">
           <a href="collection.html" class="btn-primary">View the Collection</a>
-          <div class="hero__availability">
-            <span class="label-sm">Availability</span>
-            <p>Each piece is a limited edition of 50.</p>
-          </div>
         </div>
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section class="process-section archival-grid" aria-labelledby="process-heading">
-      <div class="process-section__container">
+    <!-- Section 2: Story Behind the Lines -->
+    <header class="process-hero" style="padding-top:10rem;">
+      <div class="process-hero__grid" data-fade>
+        <div>
+          <span class="label-sm" style="color:var(--outline);display:block;margin-bottom:1.5rem;">Document 01:
+            Methodology</span>
+          <h2 id="process-heading" class="display-md" style="margin-bottom:2rem;">The Story Behind<br />the
+            Lines.</h2>
+          <p class="body-lg" style="margin-top: 2rem;">
+            How I turn the lives of my favorite icons into physical pieces of art. The journey from deterministic code
+            to the physical friction of an archival pen plot.
+          </p>
+        </div>
+        <div class="process-hero__right">
+          <video src="assets/videos/IMG_4496.mp4" autoplay loop muted playsinline></video>
+        </div>
+      </div>
+    </header>
 
-        <div class="process-header">
-          <div class="process-header__left" data-fade>
-            <p class="label-sm" style="color:var(--tint);margin-bottom:1rem;">Methodology</p>
-            <h2 id="process-heading" class="display-md" style="margin-bottom:2rem;">From an Idea<br />to Ink on Paper
-            </h2>
-            <p class="body-lg">
-              This all started as a simple idea: how do we visualize a life? Today, it involves researching our favorite
-              icons, translating their life events into code, and using a Bantam Tools NextDraw™ 2234 large format
-              plotter to physically draw their timelines using archival ink.
-            </p>
-          </div>
-
-          <div class="process-header__right" data-fade>
-            <span class="label-sm" style="color:var(--outline);">Technical Specs</span>
-            <ul class="spec-table">
-              <li class="spec-row">
-                <span class="spec-row__key">Substrate</span>
-                <span class="spec-row__val" style="font-style:italic;font-family:var(--font-headline);">300gsm Cotton
-                  Rag, Acid-Free</span>
-              </li>
-              <li class="spec-row">
-                <span class="spec-row__key">Instrument</span>
-                <span class="spec-row__val" style="font-style:italic;font-family:var(--font-headline);">Bantam Tools
-                  NextDraw™ 2234</span>
-              </li>
-              <li class="spec-row">
-                <span class="spec-row__key">Pigment</span>
-                <span class="spec-row__val" style="font-style:italic;font-family:var(--font-headline);">Isograph
-                  Technical Ink</span>
-              </li>
-            </ul>
+    <div class="sections-wrapper">
+      <!-- Section 3: Watching Time Tick Off -->
+      <div class="process-block process-block--rtl" data-fade>
+        <div class="process-block__visual">
+          <div class="hash-animation" id="hashDemo" aria-hidden="true">
+            <svg class="hash-svg" viewBox="0 0 250 100" xmlns="http://www.w3.org/2000/svg">
+              <!-- Week 1 -->
+              <path class="hash-line" d="M 15 20 L 15 80" />
+              <path class="hash-line" d="M 23 20 L 23 80" />
+              <path class="hash-line" d="M 31 20 L 31 80" />
+              <path class="hash-line" d="M 39 20 L 39 80" />
+              <path class="hash-line" d="M 47 20 L 47 80" />
+              <path class="hash-line" d="M 55 20 L 55 80" />
+              <path class="hash-line" d="M 7 50 L 63 50" />
+              <!-- Week 2 -->
+              <path class="hash-line" d="M 75 20 L 75 80" />
+              <path class="hash-line" d="M 83 20 L 83 80" />
+              <path class="hash-line" d="M 91 20 L 91 80" />
+              <path class="hash-line" d="M 99 20 L 99 80" />
+              <path class="hash-line" d="M 107 20 L 107 80" />
+              <path class="hash-line" d="M 115 20 L 115 80" />
+              <path class="hash-line" d="M 67 50 L 123 50" />
+              <!-- Week 3 -->
+              <path class="hash-line" d="M 135 20 L 135 80" />
+              <path class="hash-line" d="M 143 20 L 143 80" />
+              <path class="hash-line" d="M 151 20 L 151 80" />
+              <path class="hash-line" d="M 159 20 L 159 80" />
+              <path class="hash-line" d="M 167 20 L 167 80" />
+              <path class="hash-line" d="M 175 20 L 175 80" />
+              <path class="hash-line" d="M 127 50 L 183 50" />
+              <!-- Week 4 -->
+              <path class="hash-line" d="M 195 20 L 195 80" />
+              <path class="hash-line" d="M 203 20 L 203 80" />
+              <path class="hash-line" d="M 211 20 L 211 80" />
+              <path class="hash-line" d="M 219 20 L 219 80" />
+              <path class="hash-line" d="M 227 20 L 227 80" />
+              <path class="hash-line" d="M 235 20 L 235 80" />
+              <path class="hash-line" d="M 187 50 L 243 50" />
+            </svg>
+            <div class="hash-metrics">
+              <div class="hash-metric"><span class="metric-val" id="hashTime">0.0s</span><span class="metric-label">Plot
+                  Time</span></div>
+              <div class="hash-metric"><span class="metric-val" id="hashLife">0 Days</span><span
+                  class="metric-label">Life Equivalent</span></div>
+            </div>
           </div>
         </div>
+        <div class="process-block__text">
+          <span class="process-step">Observation</span>
+          <h2 class="process-step__title">Watching Time Tick Off</h2>
+          <div class="process-step__body" style="display:flex;flex-direction:column;gap:1rem;">
+            <p>I have spent many hours mesmerized, just watching the lines tick off, day by day, month by month, year
+              by year. A standard print copies an image. But a pen plot is a performance. Each group of hash marks is a
+              week of a real human life, drawn in sequence, one after another.</p>
+            <p>In my own life, I feel like ten years have flown by in a moment. One day I had a little toddler at home;
+              now he's almost 13. These pieces make that kind of time tangible in a way I can't fully explain. You just
+              feel it when you stand in front of one.</p>
+          </div>
+        </div>
+      </div>
 
-        <!-- 3-phase staggered grid -->
-        <div class="process-phases">
-          <div class="phase-card" data-fade>
-            <div class="phase-card__img code-block" style="border: none; margin-bottom: 1.5rem; height: auto; aspect-ratio: 3 / 4;">
-              <div class="code-block__header">
-                <span class="code-block__filename">path_generator.py</span>
-                <div class="code-block__dots">
-                  <div class="code-block__dot"></div>
-                  <div class="code-block__dot"></div>
-                </div>
+      <!-- Section 4: The Algorithm -->
+      <div class="process-block process-block--ltr" data-fade>
+        <div class="process-block__text">
+          <span class="process-step">Phase 01</span>
+          <h2 class="process-step__title">The Algorithm</h2>
+          <div class="process-step__body" style="display:flex;flex-direction:column;gap:1rem;">
+            <p>I pick these iconic people because I love their work and want to better understand their lives. Each
+              timeline is researched and curated to create a balance of history and time, translating the span of their
+              life events into fluid, deterministic geometry.</p>
+            <p>A custom Python script then processes these inputs. I've spent over a year refining this code to ensure
+              it derives a beautiful, flowing visual path for the plotter to follow.</p>
+          </div>
+        </div>
+        <div class="process-block__visual">
+          <div class="code-block code-block--interactive"
+            style="background:var(--surface-container);color:var(--primary);border:1px solid rgba(197, 198, 202, 0.25);padding:0;font-family:monospace;font-size:0.8rem;display:flex;flex-direction:column;height:400px;overflow:hidden;position:relative;cursor:pointer;"
+            aria-label="Interactive algorithm demonstration" tabindex="0">
+            <div
+              style="display:flex;justify-content:space-between;padding:1rem 1.5rem;border-bottom:1px solid rgba(197, 198, 202, 0.25);background:var(--surface);">
+              <span
+                style="color:var(--outline);text-transform:uppercase;letter-spacing:0.1em;font-size:0.65rem;">draw_cash_weeks_grid.py</span>
+              <span style="color:var(--outline);font-size:0.65rem;" class="interactive-status"></span>
+            </div>
+
+            <div style="display:flex;flex:1;overflow:hidden;">
+              <div
+                style="flex: 0 0 50%;padding:1.5rem;overflow-y:auto;border-right:1px solid rgba(197, 198, 202, 0.15);">
+                <pre style="margin:0;line-height:1.6;"><span style="color:var(--outline);"># Draw week hashes with tilt & jitter</span>
+<span style="font-weight:bold;">def</span> draw_week_hashes_tilted(rng, xi, yi, wi, hi):
+    <span style="color:var(--outline);"># 6 vertical marks (Mon-Sat)</span>
+    xs = _jittered_vertical_xs(rng, xi, wi)
+    
+    <span style="color:var(--outline);"># Draw verticals</span>
+    <span style="font-weight:bold;">for</span> x_center <span style="font-weight:bold;">in</span> xs:
+        theta_deg = 90.0 + rng.uniform(-2.2, 2.2)
+        sw = <span style="font-style:italic;">"0.4pt"</span> <span style="color:var(--outline);"># stroke width</span>
+        p = f<span style="font-style:italic;">"M {x_top},{y_top} L {x_bot},{y_bot}"</span>
+        dwg.add(Path(p, stroke=INK, width=sw))
+        
+    <span style="color:var(--outline);"># Draw Saturday crossbar</span>
+    frac = rng.uniform(0.42, 0.58)
+    yc = yi + frac * hi
+    p = f<span style="font-style:italic;">"M {x_left},{y_left} L {x_right},{y_right}"</span>
+    dwg.add(Path(p, stroke=INK, width=sw))</pre>
               </div>
-              <pre><span class="cm"># Hash Generation Logic</span>
-<span class="kw">def</span> generate_path(seed, n):
-    pts = []
-    <span class="kw">for</span> i <span class="kw">in</span> range(n):
-        x = noise.pnoise1(i * seed)
-        y = noise.pnoise1(i + 100)
-        pts.append((x, y))
-    <span class="kw">return</span> Path(pts)
 
-<span class="kw">for</span> week <span class="kw">in</span> events:
-    p = generate_path(week.seed, 12)
-    canvas.draw(p, pen=<span class="st">'0.1mm'</span>)</pre>
-            </div>
-            <div class="phase-card__body">
-              <span class="label-sm" style="color:var(--outline);">Phase 01</span>
-              <h3 class="headline" style="margin-top:0.5rem;">The Algorithm</h3>
-            </div>
-          </div>
-
-          <div class="phase-card" data-fade>
-            <div class="phase-card__img">
-              <video src="assets/videos/IMG_4496.mp4" autoplay loop muted playsinline
-                style="width: 100%; height: 100%; object-fit: cover;"></video>
-            </div>
-            <div class="phase-card__body">
-              <span class="label-sm" style="color:var(--outline);">Phase 02</span>
-              <h3 class="headline" style="margin-top:0.5rem;">The Execution</h3>
-            </div>
-          </div>
-
-          <div class="phase-card" data-fade>
-            <div class="phase-card__img">
-              <img src="assets/images/IMG_4534.jpg" alt="Finished pen plotter artwork in a gallery setting"
-                style="filter:grayscale(0.2);" />
-            </div>
-            <div class="phase-card__body">
-              <span class="label-sm" style="color:var(--outline);">Phase 03</span>
-              <h3 class="headline" style="margin-top:0.5rem;">The Final Piece</h3>
+              <div class="code-visual-output"
+                style="flex:1;display:flex;align-items:center;justify-content:center;background:var(--surface-low);padding:2rem;">
+                <svg viewBox="0 0 250 100" class="algo-svg"
+                  style="width:100%;max-width:320px;height:auto;stroke:var(--primary);stroke-width:1.5;stroke-linecap:round;fill:none;">
+                  <!-- Week 1 -->
+                  <path class="algo-line" style="animation-delay: 0.0s" d="M 15 21 L 13 81" />
+                  <path class="algo-line" style="animation-delay: 0.1s" d="M 22 18 L 24 82" />
+                  <path class="algo-line" style="animation-delay: 0.2s" d="M 31 23 L 30 78" />
+                  <path class="algo-line" style="animation-delay: 0.3s" d="M 40 19 L 38 80" />
+                  <path class="algo-line" style="animation-delay: 0.4s" d="M 46 22 L 48 77" />
+                  <path class="algo-line" style="animation-delay: 0.5s" d="M 55 18 L 54 83" />
+                  <path class="algo-line" style="animation-delay: 0.6s" d="M 8 50 L 61 53" />
+                  <!-- Week 2 -->
+                  <path class="algo-line" style="animation-delay: 0.7s" d="M 74 18 L 76 83" />
+                  <path class="algo-line" style="animation-delay: 0.8s" d="M 81 21 L 82 78" />
+                  <path class="algo-line" style="animation-delay: 0.9s" d="M 90 19 L 88 84" />
+                  <path class="algo-line" style="animation-delay: 1.0s" d="M 98 23 L 95 78" />
+                  <path class="algo-line" style="animation-delay: 1.1s" d="M 105 18 L 108 81" />
+                  <path class="algo-line" style="animation-delay: 1.2s" d="M 116 21 L 113 77" />
+                  <path class="algo-line" style="animation-delay: 1.3s" d="M 68 47 L 123 54" />
+                  <!-- Week 3 -->
+                  <path class="algo-line" style="animation-delay: 1.4s" d="M 136 22 L 132 77" />
+                  <path class="algo-line" style="animation-delay: 1.5s" d="M 144 19 L 145 84" />
+                  <path class="algo-line" style="animation-delay: 1.6s" d="M 150 20 L 149 81" />
+                  <path class="algo-line" style="animation-delay: 1.7s" d="M 158 24 L 157 76" />
+                  <path class="algo-line" style="animation-delay: 1.8s" d="M 166 18 L 169 82" />
+                  <path class="algo-line" style="animation-delay: 1.9s" d="M 176 22 L 174 77" />
+                  <path class="algo-line" style="animation-delay: 2.0s" d="M 126 56 L 184 50" />
+                  <!-- Week 4 -->
+                  <path class="algo-line" style="animation-delay: 2.1s" d="M 193 19 L 195 83" />
+                  <path class="algo-line" style="animation-delay: 2.2s" d="M 204 22 L 201 77" />
+                  <path class="algo-line" style="animation-delay: 2.3s" d="M 210 18 L 213 81" />
+                  <path class="algo-line" style="animation-delay: 2.4s" d="M 220 23 L 217 76" />
+                  <path class="algo-line" style="animation-delay: 2.5s" d="M 226 19 L 228 84" />
+                  <path class="algo-line" style="animation-delay: 2.6s" d="M 234 21 L 236 80" />
+                  <path class="algo-line" style="animation-delay: 2.7s" d="M 185 45 L 245 55" />
+                </svg>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </section>
 
-    <!-- GALLERY TEASER -->
-    <section class="gallery-section" id="collection" aria-labelledby="gallery-heading">
-      <div class="gallery-section__container">
-        <p class="label-sm gallery-kicker">The Archival Record</p>
-
-        <div class="gallery-grid">
-          <div class="gallery-item" data-fade>
-            <a href="detail.html" class="gallery-item__matte">
-              <img src="assets/images/IMG_4534.jpg" alt="David Bowie pen plot artwork — Major Tom edition" />
-            </a>
-            <div class="gallery-item__meta">
-              <div>
-                <h3 class="gallery-item__title">Major Tom</h3>
-                <p class="gallery-item__edition">Plot No. 042/050</p>
-              </div>
-              <span class="label-md">£450.00</span>
-            </div>
+      <!-- Section 5: The Layout -->
+      <div class="process-block process-block--rtl" data-fade>
+        <div class="process-block__visual">
+          <div class="canvas-placeholder">
+            <!-- Wireframe canvas SVG -->
+            <svg viewBox="0 0 100 126" width="55%" style="opacity:0.22;color:var(--primary);" aria-hidden="true">
+              <rect x="8" y="8" width="84" height="110" fill="none" stroke="currentColor" stroke-width="0.5" />
+              <line x1="50" y1="0" x2="50" y2="126" stroke="currentColor" stroke-width="0.2" stroke-dasharray="3,3" />
+              <line x1="0" y1="63" x2="100" y2="63" stroke="currentColor" stroke-width="0.2" stroke-dasharray="3,3" />
+              <rect x="20" y="20" width="20" height="20" fill="none" stroke="currentColor" stroke-width="0.3" />
+              <rect x="60" y="50" width="18" height="30" fill="none" stroke="currentColor" stroke-width="0.3" />
+              <line x1="15" y1="55" x2="45" y2="55" stroke="currentColor" stroke-width="0.2" />
+              <line x1="15" y1="60" x2="38" y2="60" stroke="currentColor" stroke-width="0.2" />
+              <line x1="15" y1="65" x2="42" y2="65" stroke="currentColor" stroke-width="0.2" />
+            </svg>
+            <span class="label-sm canvas-placeholder__label" style="color:rgba(117,119,122,0.6);">Canvas: 19 × 24 IN /
+              Scale: 1:1</span>
           </div>
+        </div>
+        <div class="process-block__text">
+          <span class="process-step">Phase 02</span>
+          <h2 class="process-step__title">The Layout</h2>
+          <div class="process-step__body" style="display:flex;flex-direction:column;gap:1rem;">
+            <p>The transition from code to canvas requires human intuition. Every design is reviewed and carefully
+              adjusted.</p>
+            <p>I print dozens of test prints for each piece, tweaking the hash mark spacing, text layout, and even the
+              speed and pressure of the plotter to get it just right before the final plot begins.</p>
+          </div>
+        </div>
+      </div>
 
-          <div class="gallery-item" data-fade>
-            <a href="detail.html" class="gallery-item__matte">
-              <img src="assets/images/IMG_4536.jpg" alt="Johnny Cash pen plot artwork — Station to Station" />
-            </a>
-            <div class="gallery-item__meta">
-              <div>
-                <h3 class="gallery-item__title">Station to Station</h3>
-                <p class="gallery-item__edition">Plot No. 011/050</p>
-              </div>
-              <span class="label-md">£450.00</span>
+      <!-- Section 6: Pen & Paper + Machine -->
+      <div class="process-block process-block--ltr" data-fade>
+        <div class="process-block__text">
+          <span class="process-step">Phase 03</span>
+          <h2 class="process-step__title">Pen & Paper + Machine</h2>
+          <div class="process-step__body" style="display:flex;flex-direction:column;gap:1rem;">
+            <p>Permanence is my priority. I utilize 300gsm acid-free cotton rag paper, chosen for its structural
+              integrity and tactile grain, paired with lightfast carbon-based pigment ink (ISO 12757-2).</p>
+            <p>Every single piece is unique. The imperfections of pen on paper, the subtle vibrations of the studio, and
+              the way the ink absorbs into the stock means no two plots are ever the same. I utilize a Bantam
+              Tools NextDraw™ large format plotter for its mechanical precision, but it's the physical friction that
+              gives the piece its soul. A single piece can take over 8 hours of plotting.</p>
+          </div>
+        </div>
+        <div class="process-block__visual">
+          <div class="machine-grid">
+            <div class="machine-grid__top">
+              <img src="assets/images/IMG_4500.jpg" alt="Paper grain texture of heavy cotton archival stock" />
+              <img src="assets/images/IMG_4501.jpg" alt="Pigment ink plotting" />
+            </div>
+            <div class="machine-grid__bottom">
+              <video src="assets/videos/IMG_4498.mp4" autoplay loop muted playsinline></video>
             </div>
           </div>
         </div>
+      </div>
+    </div><!-- End Sections Wrapper -->
 
-        <a href="collection.html" class="btn-tertiary gallery-cta">Access Full Archive</a>
+    <!-- Section 7: Origin Story -->
+    <section class="origin-section" aria-labelledby="origin-heading">
+      <div class="origin-section__header" data-fade>
+        <p class="label-sm" style="color:var(--tint);margin-bottom:1rem;">The Origin</p>
+        <h2 id="origin-heading" class="display-md" style="max-width:640px;">A Man Who Wrote His Own Ending</h2>
+      </div>
+
+      <div class="origin-blocks">
+        <div class="origin-block origin-block--ltr" data-fade>
+          <div class="origin-block__text">
+            <span class="process-step">The Spark</span>
+            <h3 class="process-step__title">David Bowie's Farewell</h3>
+            <div class="process-step__body" style="display:flex;flex-direction:column;gap:1rem;">
+              <p>David Bowie released <em>Blackstar</em> on his 69th birthday, January 8, 2016, and died two days
+                later. He'd kept his illness private for 18 months, making an album that, in retrospect, was clearly a
+                farewell. The scale of that intentionality is a powerful thing.</p>
+              <p>I'd always been a massive Bowie fan. The way he lived and the way he chose to end: it was
+                extraordinary. I became fixated on the idea of a life as a story, something with a shape and a structure
+                you could actually see. That obsession sat with me for years, quietly, until 2021 when I finally figured
+                out how to make it real.</p>
+              <a href="detail.html" class="btn-primary" style="align-self:flex-start;margin-top:1rem;">View Bowie's
+                Record</a>
+            </div>
+          </div>
+          <div class="origin-block__visual">
+            <img src="assets/images/bowie_piece_1.jpg" alt="Shapes of Life: David Bowie pen plotter artwork detail" />
+            <p class="origin-caption">Record No. 001: David Bowie / Detail</p>
+          </div>
+        </div>
+
+        <div class="origin-block origin-block--rtl" data-fade>
+          <div class="origin-block__visual">
+            <img src="assets/images/IMG_4536.jpg" alt="Shapes of Life: Johnny Cash piece" style="aspect-ratio:1/1;" />
+          </div>
+          <div class="origin-block__text">
+            <span class="process-step">The Scale</span>
+            <h3 class="process-step__title">Johnny Cash and the Rhythm of Resilience</h3>
+            <div class="process-step__body" style="display:flex;flex-direction:column;gap:1rem;">
+              <p>In 2025, I visited the Johnny Cash Museum in Nashville. It's a relatively small space
+                packed dense with the soaring highs and profound struggles of a musical legend. That experience
+                crystallized a critical point of inspiration: scale matters.</p>
+              <p>The same life, whether compressed into a single room or expanded across a canvas, changes how you feel
+                it. Seeing his entirety plotted out line-by-line, the quiet early days, the dark periods of addiction,
+                and the triumphant American Recordings comeback, makes his resilience tangible. Every group of lines is a
+                week fought, every row a year survived in the song of his life.</p>
+              <a href="detail.html" class="btn-primary" style="align-self:flex-start;margin-top:1rem;">View Cash's
+                Record</a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer" role="contentinfo"
+    style="display:flex; flex-wrap:wrap; gap:4rem; justify-content:space-between;">
     <div>
       <p class="footer__copy">© 2026 Shapes of Life. Archival Record No. 882.</p>
       <div class="footer__links" style="margin-top:1rem;">
@@ -495,12 +915,87 @@
       </div>
     </div>
     <div>
+      <p class="footer__copy" style="margin-bottom:0.5rem; color:var(--on-surface);">From the Journal</p>
+      <div class="footer__links" style="flex-direction:column; gap:0.5rem; align-items:flex-start;">
+        <a href="blog-finding-the-machine.html" class="footer__link">Finding the Machine</a>
+        <a href="blog-the-original-code.html" class="footer__link">The Original Code</a>
+        <a href="blog-the-materials.html" class="footer__link">The Materials</a>
+        <a href="blog-future-plots.html" class="footer__link">Future Plots</a>
+      </div>
+    </div>
+    <div>
       <p class="footer__copy" style="margin-bottom:0.25rem;">Studio Address</p>
       <p class="footer__address">Unit 4, The Custard Factory, Birmingham, UK</p>
     </div>
   </footer>
 
   <script src="scripts/main.js"></script>
+  <script>
+    // Hash animation logic ported directly from process.html
+    document.addEventListener("DOMContentLoaded", () => {
+      const lines = document.querySelectorAll("#hashDemo .hash-line");
+      const timeEl = document.getElementById("hashTime");
+      const lifeEl = document.getElementById("hashLife");
+      if (!lines.length || !timeEl || !lifeEl) return;
+
+      let currentHash = 0;
+      let interval;
+
+      function playAnimation() {
+        lines.forEach(l => l.classList.remove('draw'));
+        currentHash = 0;
+        updateMetrics(0);
+
+        interval = setInterval(() => {
+          if (currentHash < 28) {
+            lines[currentHash].style.animation = "none";
+            lines[currentHash].offsetHeight;
+            lines[currentHash].style.animation = null;
+            lines[currentHash].classList.add('draw');
+
+            currentHash++;
+            updateMetrics(currentHash);
+          } else {
+            clearInterval(interval);
+            setTimeout(playAnimation, 4000);
+          }
+        }, 1100);
+      }
+
+      function updateMetrics(count) {
+        timeEl.textContent = (count * 1.1).toFixed(1) + "s";
+
+        if (count === 0) {
+          lifeEl.textContent = "0 Days";
+        } else if (count === 28) {
+          lifeEl.textContent = "1 Month";
+        } else {
+          let days = count % 7;
+          let weeks = Math.floor(count / 7);
+
+          let parts = [];
+          if (weeks > 0) parts.push(weeks + " Wk" + (weeks > 1 ? "s" : ""));
+          if (days > 0) parts.push(days + " Day" + (days > 1 ? "s" : ""));
+
+          lifeEl.textContent = parts.join(", ");
+        }
+      }
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            if (!interval) playAnimation();
+          } else {
+            clearInterval(interval);
+            interval = null;
+          }
+        });
+      }, { threshold: 0.2 });
+
+      const demoEl = document.getElementById('hashDemo');
+      if (demoEl) observer.observe(demoEl);
+    });
+  </script>
 </body>
 
 </html>
